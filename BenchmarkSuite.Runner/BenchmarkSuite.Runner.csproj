@@ -40,13 +40,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\BenchmarkSuite\BenchmarkSuite.csproj">
-      <Project>{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}</Project>
-      <Name>BenchmarkSuite</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BenchmarkSuite.Tests\BenchmarkSuite.Tests.csproj">
       <Project>{1E751CC8-4308-4F7D-9F4A-1F5AC4E9CD4C}</Project>
       <Name>BenchmarkSuite.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BenchmarkSuite\BenchmarkSuite.Framework.csproj">
+      <Project>{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}</Project>
+      <Name>BenchmarkSuite.Framework</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

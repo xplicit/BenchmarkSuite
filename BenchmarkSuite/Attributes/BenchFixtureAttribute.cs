@@ -35,7 +35,7 @@ namespace NUnit.Framework
     /// {}
     /// </example>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple=true, Inherited=true)]
-    public class TestFixtureAttribute : FixtureBuilderAttribute, IFixtureBuilder, IApplyToTest
+    public class BenchFixtureAttribute : FixtureBuilderAttribute, IFixtureBuilder, IApplyToTest
     {
         private readonly NUnitTestFixtureBuilder builder = new NUnitTestFixtureBuilder();
 
@@ -44,7 +44,7 @@ namespace NUnit.Framework
         /// <summary>
         /// Default constructor
         /// </summary>
-        public TestFixtureAttribute() : this( new object[0] ) { }
+        public BenchFixtureAttribute() : this( new object[0] ) { }
         
         /// <summary>
         /// Construct with a object[] representing a set of arguments. 
@@ -52,7 +52,7 @@ namespace NUnit.Framework
         /// type arguments and constructor arguments.
         /// </summary>
         /// <param name="arguments"></param>
-        public TestFixtureAttribute(params object[] arguments)
+        public BenchFixtureAttribute(params object[] arguments)
         {
             Arguments = arguments;
             TypeArgs = new Type[0];

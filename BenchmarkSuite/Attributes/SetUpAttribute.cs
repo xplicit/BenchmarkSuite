@@ -31,7 +31,7 @@ namespace NUnit.Framework
     /// namespace or an assembly.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited=true)]
-    public class SetUpAttribute : NUnitAttribute
+    public class SetUpAttribute : BenchBaseAttribute
     { }
 
     /// <summary>
@@ -40,7 +40,7 @@ namespace NUnit.Framework
     /// namespace or an assembly.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited=true)]
-    public class PreTestAttribute : NUnitAttribute
+    public class PreTestAttribute : BenchBaseAttribute
     { }
 
     /// <summary>
@@ -49,6 +49,6 @@ namespace NUnit.Framework
     /// namespace or an assembly.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited=true)]
-    public class PostTestAttribute : NUnitAttribute
+    public class PostTestAttribute : BenchBaseAttribute
     { }
 }

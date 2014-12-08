@@ -30,7 +30,7 @@ namespace NUnit.Framework
 	/// to perform setup before any child tests are run.
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple=false, Inherited=true)]
-	public class OneTimeSetUpAttribute : NUnitAttribute
+	public class OneTimeSetUpAttribute : BenchBaseAttribute
 	{
 	}
 }

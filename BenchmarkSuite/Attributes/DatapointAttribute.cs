@@ -30,7 +30,7 @@ namespace NUnit.Framework
     /// within the same fixture that requires an argument of the field's Type.
     /// </summary>
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-    public class DatapointAttribute : NUnitAttribute
+    public class DatapointAttribute : BenchBaseAttribute
     {
     }
 }

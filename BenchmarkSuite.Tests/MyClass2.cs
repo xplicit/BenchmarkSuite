@@ -3,14 +3,14 @@ using NUnit.Framework;
 
 namespace BenchmarkSuite.Tests
 {
-	[TestFixture]
+	[BenchFixture]
 	public class MyClass2
 	{
 		public MyClass2 ()
 		{
 		}
 
-		[Test]
+		[Bench]
 		public void Bench1()
 		{
 			Console.WriteLine ("Bench1");

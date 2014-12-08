@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite", "BenchmarkSuite\BenchmarkSuite.csproj", "{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Framework", "BenchmarkSuite\BenchmarkSuite.Framework.csproj", "{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Runner", "BenchmarkSuite.Runner\BenchmarkSuite.Runner.csproj", "{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00}"
 EndProject

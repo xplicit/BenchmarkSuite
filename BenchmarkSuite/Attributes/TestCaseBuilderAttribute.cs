@@ -29,7 +29,7 @@ namespace NUnit.Framework
     /// The abstract base class for all NUnit attributes that build test cases.
     /// The derived class should implement one of the test builder interfaces.
     /// </summary>
-    public abstract class TestCaseBuilderAttribute : NUnitAttribute
+    public abstract class TestCaseBuilderAttribute : BenchBaseAttribute
     {
         /// <summary>
         /// Default constructor

@@ -96,7 +96,7 @@ namespace NUnit.Framework.Internal.Builders
 		/// <param name="type">The Type for which to construct a fixture.</param>
 		/// <param name="attr">The attribute marking the fixture Type.</param>
 		/// <returns></returns>
-		public TestSuite BuildFrom(Type type, TestFixtureAttribute attr)
+		public TestSuite BuildFrom(Type type, BenchFixtureAttribute attr)
 		{
 			object[] arguments = null;
 

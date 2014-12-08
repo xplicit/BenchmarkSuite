@@ -4,14 +4,14 @@ using NUnit.Framework;
 
 namespace BenchmarkSuite.Tests
 {
-	[TestFixture]
+	[BenchFixtureAttribute]
 	public class MyClass
 	{
 		public MyClass ()
 		{
 		}
 
-		[Test]
+		[Bench]
 		public void Bench1()
 		{
 			Console.WriteLine ("Bench1");
@@ -27,7 +27,7 @@ namespace BenchmarkSuite.Tests
 
 		}
 
-		[Test]
+		[Bench]
 		public void Bench2()
 		{
 			Console.WriteLine ("Bench2");

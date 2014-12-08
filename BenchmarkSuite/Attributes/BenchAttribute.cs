@@ -52,7 +52,7 @@ namespace NUnit.Framework
     /// </example>
     /// 
     [AttributeUsage(AttributeTargets.Method, AllowMultiple=false, Inherited=true)]
-    public class TestAttribute : TestCaseBuilderAttribute, ISimpleTestBuilder, IApplyToTest, IImplyFixture
+    public class BenchAttribute : TestCaseBuilderAttribute, ISimpleTestBuilder, IApplyToTest, IImplyFixture
     {
         private object _expectedResult;
         private readonly NUnitTestCaseBuilder _builder = new NUnitTestCaseBuilder();
