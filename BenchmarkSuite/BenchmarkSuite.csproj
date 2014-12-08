@@ -35,7 +35,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Benchmark.cs" />
     <Compile Include="DefaultTestAssemblyBuilder.cs" />
@@ -111,6 +110,49 @@
     <Compile Include="Attributes\DatapointAttribute.cs" />
     <Compile Include="Attributes\DatapointSourceAttribute.cs" />
     <Compile Include="Internal\ProviderCache.cs" />
+    <Compile Include="Attributes\TestAttribute.cs" />
+    <Compile Include="NUnitTestAssemblyRunner.cs" />
+    <Compile Include="Interfaces\ITestAssemblyRunner.cs" />
+    <Compile Include="Internal\Execution\WorkItem.cs" />
+    <Compile Include="Internal\TestExecutionContext.cs" />
+    <Compile Include="Interfaces\ITestListener.cs" />
+    <Compile Include="Interfaces\ITestFilter.cs" />
+    <Compile Include="Internal\Execution\WorkItemState.cs" />
+    <Compile Include="Internal\Execution\SimpleWorkItemDispatcher.cs" />
+    <Compile Include="Internal\Execution\IWorkItemDispatcher.cs" />
+    <Compile Include="Internal\Execution\CompositeWorkItem.cs" />
+    <Compile Include="Internal\Execution\SimpleWorkItem.cs" />
+    <Compile Include="ITestAction.cs" />
+    <Compile Include="Internal\ActionsHelper.cs" />
+    <Compile Include="Internal\ThreadUtility.cs" />
+    <Compile Include="Internal\Execution\CommandBuilder.cs" />
+    <Compile Include="Internal\Commands\TestActionItem.cs" />
+    <Compile Include="Internal\Commands\SetUpTearDownItem.cs" />
+    <Compile Include="ActionTargets.cs" />
+    <Compile Include="Internal\Commands\TestCommand.cs" />
+    <Compile Include="Internal\RandomGenerator.cs" />
+    <Compile Include="Internal\Commands\OneTimeSetUpCommand.cs" />
+    <Compile Include="Internal\Commands\OneTimeTearDownCommand.cs" />
+    <Compile Include="Internal\Commands\SkipCommand.cs" />
+    <Compile Include="Internal\Commands\TheoryResultCommand.cs" />
+    <Compile Include="Internal\Commands\DelegatingTestCommand.cs" />
+    <Compile Include="Internal\TestListener.cs" />
+    <Compile Include="Internal\Commands\SetUpTearDownCommand.cs" />
+    <Compile Include="Internal\Commands\TestMethodCommand.cs" />
+    <Compile Include="Internal\Commands\TestActionCommand.cs" />
+    <Compile Include="Interfaces\ICommandDecorator.cs" />
+    <Compile Include="Internal\IApplyToContext.cs" />
+    <Compile Include="Internal\Commands\ApplyChangesToContextCommand.cs" />
+    <Compile Include="Internal\TestFilter.cs" />
+    <Compile Include="Internal\Filters\AndFilter.cs" />
+    <Compile Include="Internal\Filters\CategoryExpression.cs" />
+    <Compile Include="Internal\Filters\CategoryFilter.cs" />
+    <Compile Include="Internal\Filters\IdFilter.cs" />
+    <Compile Include="Internal\Filters\NotFilter.cs" />
+    <Compile Include="Internal\Filters\OrFilter.cs" />
+    <Compile Include="Internal\Filters\SimpleCategoryExpression.cs" />
+    <Compile Include="Internal\Filters\SimpleNameFilter.cs" />
+    <Compile Include="Internal\Filters\ValueMatchFilter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -121,5 +163,8 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Attributes\" />
     <Folder Include="Api\" />
+    <Folder Include="Internal\Execution\" />
+    <Folder Include="Internal\Commands\" />
+    <Folder Include="Internal\Filters\" />
   </ItemGroup>
 </Project>
