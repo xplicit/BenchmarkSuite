@@ -21,18 +21,18 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     using System;
     using System.Collections.Generic;
     using System.Reflection;
-    using NUnit.Framework.Interfaces;
-    using NUnit.Framework.Internal;
-    using NUnit.Framework.Internal.Builders;
+    using BenchmarkSuite.Framework.Interfaces;
+    using BenchmarkSuite.Framework.Internal;
+    using BenchmarkSuite.Framework.Internal.Builders;
 
     /// <summary>
     /// Adding this attribute to a method within a <seealso cref="TestFixtureAttribute"/> 
-    /// class makes the method callable from the NUnit test runner. There is a property 
+    /// class makes the method callable from the BenchmarkSuite test runner. There is a property 
     /// called Description which is optional which you can provide a more detailed test
     /// description. This class cannot be inherited.
     /// </summary>

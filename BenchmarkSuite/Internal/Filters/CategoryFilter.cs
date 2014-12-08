@@ -25,9 +25,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Filters
+namespace BenchmarkSuite.Framework.Internal.Filters
 {
     /// <summary>
     /// CategoryFilter is able to select or exclude tests

@@ -21,7 +21,7 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
 
-namespace NUnit.Framework.Internal.Execution
+namespace BenchmarkSuite.Framework.Internal.Execution
 {
     /// <summary>
     /// An IWorkItemDispatcher handles execution of work items.

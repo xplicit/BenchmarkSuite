@@ -24,7 +24,7 @@
 using System;
 
 
-namespace NUnit.Common
+namespace BenchmarkSuite.Common
 {
 	/// <summary>
 	/// OutputSpecification encapsulates a file output path and format

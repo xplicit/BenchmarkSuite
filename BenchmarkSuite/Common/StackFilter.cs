@@ -25,17 +25,17 @@ using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
-	/// StackFilter class is used to remove internal NUnit
+	/// StackFilter class is used to remove internal BenchmarkSuite
 	/// entries from a stack trace so that the resulting
 	/// trace provides better information about the test.
 	/// </summary>
 	public static class StackFilter
 	{
 		private static readonly Regex assertOrAssumeRegex = new Regex(
-			@" NUnit\.Framework\.Ass(ert|ume)\.");
+			@" BenchmarkSuite\.Framework\.Ass(ert|ume)\.");
 
 		/// <summary>
 		/// Filters a raw stack trace and returns the result.

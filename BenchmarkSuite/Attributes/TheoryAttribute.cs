@@ -24,16 +24,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using NUnit.Framework.Internal;
+using BenchmarkSuite.Framework.Internal;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     using Interfaces;
     using Internal.Builders;
 
     /// <summary>
     /// Adding this attribute to a method within a <seealso cref="TestFixtureAttribute"/> 
-    /// class makes the method callable from the NUnit test runner. There is a property 
+    /// class makes the method callable from the BenchmarkSuite test runner. There is a property 
     /// called Description which is optional which you can provide a more detailed test
     /// description. This class cannot be inherited.
     /// </summary>

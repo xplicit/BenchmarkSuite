@@ -22,9 +22,9 @@
 // ***********************************************************************
 
 using System;
-using NUnit.Framework.Internal;
+using BenchmarkSuite.Framework.Internal;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
 	/// <summary>
 	/// The ISuiteBuilder interface is exposed by a class that knows how to

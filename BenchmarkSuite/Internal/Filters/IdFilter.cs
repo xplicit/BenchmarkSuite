@@ -23,9 +23,9 @@
 
 using System;
 using System.Collections.Generic;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Filters
+namespace BenchmarkSuite.Framework.Internal.Filters
 {
     /// <summary>
     /// IdFilter selects tests based on their id

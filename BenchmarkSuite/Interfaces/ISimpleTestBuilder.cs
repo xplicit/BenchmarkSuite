@@ -23,9 +23,9 @@
 
 using System.Collections.Generic;
 using System.Reflection;
-using NUnit.Framework.Internal; // TODO: We shouldn't reference this in the interface
+using BenchmarkSuite.Framework.Internal; // TODO: We shouldn't reference this in the interface
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
     /// <summary>
     /// The ISimpleTestBuilder interface is exposed by a class that knows how to

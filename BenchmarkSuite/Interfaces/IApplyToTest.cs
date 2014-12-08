@@ -23,7 +23,7 @@
 
 using System;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// The IApplyToTest interface is implemented by self-applying

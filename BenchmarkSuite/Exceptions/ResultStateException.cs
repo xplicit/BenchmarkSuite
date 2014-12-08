@@ -23,7 +23,7 @@
 
 using System;
 
-namespace NUnit.Framework 
+namespace BenchmarkSuite.Framework 
 {
 	using Interfaces;
 

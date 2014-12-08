@@ -25,9 +25,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
     /// <summary>
     /// CombinatorialStrategy creates test cases by using all possible

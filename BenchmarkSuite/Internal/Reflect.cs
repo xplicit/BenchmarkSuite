@@ -26,7 +26,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// Helper methods for inspecting a type by reflection. 
@@ -40,8 +40,8 @@ namespace NUnit.Framework.Internal
 	/// operate with the full name of the member being sought. This
 	/// removes the necessity of the caller having a reference to the
 	/// assembly that defines the item being sought and allows the
-	/// NUnit core to inspect assemblies that reference an older
-	/// version of the NUnit framework.
+	/// BenchmarkSuite core to inspect assemblies that reference an older
+	/// version of the BenchmarkSuite framework.
 	/// </summary>
 	public static class Reflect
 	{

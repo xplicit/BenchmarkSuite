@@ -22,9 +22,9 @@
 // ***********************************************************************
 
 using System;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// TODO: Documentation needed for class

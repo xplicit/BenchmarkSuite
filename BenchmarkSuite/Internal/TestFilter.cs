@@ -22,14 +22,14 @@
 // ***********************************************************************
 
 using System;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal.Filters;
+using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Framework.Internal.Filters;
 
 #if !NETCF && !SILVERLIGHT && !PORTABLE
 using XmlNode = System.Xml.XmlNode;
 #endif
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// Interface to be implemented by filters applied to tests.

@@ -24,9 +24,9 @@
 using System;
 using System.Collections;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Api
+namespace BenchmarkSuite.Framework.Api
 {
 	/// <summary>
 	/// The ITestAssemblyBuilder interface is implemented by a class

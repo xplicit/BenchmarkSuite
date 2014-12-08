@@ -23,7 +23,7 @@
 
 using System;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     /// <summary>
     /// The different targets a test action attribute can be applied to

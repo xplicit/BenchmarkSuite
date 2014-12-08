@@ -24,7 +24,7 @@
 using System;
 using System.Collections;
 
-namespace NUnit.Framework.Internal.Filters
+namespace BenchmarkSuite.Framework.Internal.Filters
 {
     /// <summary>
     /// CategoryExpression parses strings representing boolean

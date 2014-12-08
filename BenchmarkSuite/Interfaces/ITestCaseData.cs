@@ -24,7 +24,7 @@
 using System;
 using System.Collections;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
     /// <summary>
     /// The ITestCaseData interface is implemented by a class

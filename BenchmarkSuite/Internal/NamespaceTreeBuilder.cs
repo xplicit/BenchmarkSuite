@@ -24,7 +24,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
     /// <summary>
     /// Class that can build a tree of automatic namespace

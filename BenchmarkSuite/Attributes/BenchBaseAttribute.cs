@@ -23,10 +23,10 @@
 
 using System;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     /// <summary>
-    /// The abstract base class for all custom attributes defined by NUnit.
+    /// The abstract base class for all custom attributes defined by BenchmarkSuite.
     /// </summary>
     public abstract class BenchBaseAttribute : Attribute
     {

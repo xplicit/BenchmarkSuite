@@ -24,7 +24,7 @@
 using System;
 using System.Reflection;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     using Interfaces;
     using Internal;

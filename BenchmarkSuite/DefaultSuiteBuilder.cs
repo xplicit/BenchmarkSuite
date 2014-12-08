@@ -22,9 +22,9 @@
 // ***********************************************************************
 
 using System;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
 	/// <summary>
 	/// Built-in SuiteBuilder for all types of test classes.

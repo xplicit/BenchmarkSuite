@@ -24,7 +24,7 @@
 using System.Collections;
 using System.Reflection;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
     /// <summary>
     /// The IDataPointProvider interface is used by extensions

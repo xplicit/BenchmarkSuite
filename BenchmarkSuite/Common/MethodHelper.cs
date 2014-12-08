@@ -25,7 +25,7 @@ using System;
 using System.Reflection;
 using System.Text;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// MethodHelper provides static methods for working with methods.
@@ -33,7 +33,7 @@ namespace NUnit.Framework.Internal
     public class MethodHelper
     {
         /// <summary>
-        /// Gets the display name for a method as used by NUnit.
+        /// Gets the display name for a method as used by BenchmarkSuite.
         /// </summary>
         /// <param name="method">The method for which a display name is needed.</param>
         /// <param name="arglist">The arguments provided.</param>

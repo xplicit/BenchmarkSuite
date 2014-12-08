@@ -23,7 +23,7 @@
 
 using System;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     /// <summary>
     /// Used to mark a field for use as a datapoint when executing a theory

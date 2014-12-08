@@ -26,7 +26,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     using Interfaces;
 

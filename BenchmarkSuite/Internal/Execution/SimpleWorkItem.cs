@@ -23,9 +23,9 @@
 
 using System;
 using System.Threading;
-using NUnit.Framework.Internal.Commands;
+using BenchmarkSuite.Framework.Internal.Commands;
 
-namespace NUnit.Framework.Internal.Execution
+namespace BenchmarkSuite.Framework.Internal.Execution
 {
     /// <summary>
     /// A SimpleWorkItem represents a single test case and is

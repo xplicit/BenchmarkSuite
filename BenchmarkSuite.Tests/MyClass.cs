@@ -1,5 +1,5 @@
 ﻿using System;
-using NUnit.Framework;
+using BenchmarkSuite.Framework;
 
 
 namespace BenchmarkSuite.Tests

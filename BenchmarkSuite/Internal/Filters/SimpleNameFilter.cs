@@ -23,9 +23,9 @@
 
 using System;
 using System.Collections.Generic;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Filters
+namespace BenchmarkSuite.Framework.Internal.Filters
 {
     /// <summary>
     /// SimpleName filter selects tests based on their name

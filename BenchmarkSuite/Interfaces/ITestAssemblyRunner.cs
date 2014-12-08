@@ -23,9 +23,9 @@
 
 using System;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Api
+namespace BenchmarkSuite.Framework.Api
 {
     /// <summary>
     /// The ITestAssemblyRunner interface is implemented by classes

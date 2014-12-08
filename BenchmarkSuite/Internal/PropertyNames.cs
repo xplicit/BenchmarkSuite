@@ -23,11 +23,11 @@
 
 using System;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// The PropertyNames class provides static constants for the
-	/// standard property ids that NUnit uses on tests.
+	/// standard property ids that BenchmarkSuite uses on tests.
 	/// </summary>
 	public class PropertyNames
 	{

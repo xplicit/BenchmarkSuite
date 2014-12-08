@@ -22,14 +22,14 @@
 // ***********************************************************************
 
 #if PORTABLE
-using Path = NUnit.Framework.Compatibility.Path;
+using Path = BenchmarkSuite.Framework.Compatibility.Path;
 #else
 using System.IO;
 #endif
 
 using System.Reflection;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// TestAssembly is a TestSuite that represents the execution

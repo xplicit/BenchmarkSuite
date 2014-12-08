@@ -24,7 +24,7 @@
 using System.Collections.Generic;
 
 
-namespace NUnit.Common
+namespace BenchmarkSuite.Common
 {
 	/// <summary>
 	/// TestNameParser is used to parse the arguments to the 

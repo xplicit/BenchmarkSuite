@@ -24,10 +24,10 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
-//using NUnit.Framework.Internal.Commands;
+using BenchmarkSuite.Framework.Interfaces;
+//using BenchmarkSuite.Framework.Internal.Commands;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// TestSuite represents a composite test, which contains other tests.
@@ -228,7 +228,7 @@ namespace NUnit.Framework.Internal
 
 		/// <summary>
 		/// Check that setup and teardown methods marked by certain attributes
-		/// meet NUnit's requirements and mark the tests not runnable otherwise.
+		/// meet BenchmarkSuite's requirements and mark the tests not runnable otherwise.
 		/// </summary>
 		/// <param name="attrType">The attribute type to check for</param>
 		protected void CheckSetUpTearDownMethods(Type attrType)

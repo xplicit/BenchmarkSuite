@@ -22,9 +22,9 @@
 // ***********************************************************************
 
 using System;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// ParameterSet encapsulates method arguments and

@@ -22,7 +22,7 @@
 // ***********************************************************************
 using System;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// RandomGenerator returns a set of random _values in a repeatable

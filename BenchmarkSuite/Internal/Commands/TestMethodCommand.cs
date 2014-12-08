@@ -23,10 +23,10 @@
 
 using System;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 using BenchmarkSuite;
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// TestMethodCommand is the lowest level concrete command
@@ -66,7 +66,7 @@ namespace NUnit.Framework.Internal.Commands
             }
 			//TODO: write bench
 //            if (testMethod.HasExpectedResult)
-//                NUnit.Framework.Assert.AreEqual(testMethod.ExpectedResult, result);
+//                BenchmarkSuite.Framework.Assert.AreEqual(testMethod.ExpectedResult, result);
 
             context.CurrentResult.SetResult(ResultState.Success);
 

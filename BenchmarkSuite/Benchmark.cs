@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using NUnit.Framework.Internal.Commands;
+using BenchmarkSuite.Framework.Internal.Commands;
 
 namespace BenchmarkSuite
 {

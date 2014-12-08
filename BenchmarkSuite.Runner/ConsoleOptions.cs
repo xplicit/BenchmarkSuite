@@ -25,14 +25,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Mono.Options;
-using NUnit.Common;
+using BenchmarkSuite.Common;
 
-namespace NUnit.ConsoleRunner.Options
+namespace BenchmarkSuite.ConsoleRunner.Options
 {
 
 	/// <summary>
 	/// ConsoleOptions encapsulates the option settings for
-	/// the nunit-console program. It inherits from the Mono
+	/// the BenchmarkSuite-console program. It inherits from the Mono
 	/// Options OptionSet class and provides a central location
 	/// for defining and parsing options.
 	/// </summary>

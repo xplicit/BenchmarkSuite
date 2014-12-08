@@ -23,9 +23,9 @@
 
 using System;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
     /// <summary>
     /// NUnitTestCaseBuilder is a utility class used by attributes

@@ -23,9 +23,9 @@
 
 using System;
 using System.Collections.Generic;
-using NUnit.Framework.Internal.Commands;
+using BenchmarkSuite.Framework.Internal.Commands;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
     /// <summary>
     /// ICommandDecorator is implemented by attributes and other

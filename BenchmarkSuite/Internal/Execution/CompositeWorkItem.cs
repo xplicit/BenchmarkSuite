@@ -24,10 +24,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using NUnit.Framework.Internal.Commands;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Internal.Commands;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Execution
+namespace BenchmarkSuite.Framework.Internal.Execution
 {
     /// <summary>
     /// A CompositeWorkItem represents a test suite and

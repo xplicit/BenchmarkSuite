@@ -1,4 +1,4 @@
-﻿namespace NUnit.Framework.Internal.Filters
+﻿namespace BenchmarkSuite.Framework.Internal.Filters
 {
     /// <summary>
     /// SimpleCategoryFilter parses a basic string representing a

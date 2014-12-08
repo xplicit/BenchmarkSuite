@@ -26,7 +26,7 @@ using System.Collections.Generic;
 using System.Threading;
 using BenchmarkSuite.Common;
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     using Interfaces;
 

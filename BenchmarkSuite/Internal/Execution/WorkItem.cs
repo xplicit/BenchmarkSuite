@@ -24,12 +24,12 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 using log4net;
 using BenchmarkSuite.Common;
 using System.Diagnostics;
 
-namespace NUnit.Framework.Internal.Execution
+namespace BenchmarkSuite.Framework.Internal.Execution
 {
     /// <summary>
     /// A WorkItem may be an individual test case, a fixture or

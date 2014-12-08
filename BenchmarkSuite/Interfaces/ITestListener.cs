@@ -21,13 +21,13 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
     /// <summary>
     /// The ITestListener interface is used internally to receive 
     /// notifications of significant events while a test is being 
     /// run. The events are propogated to clients by means of an
-    /// AsyncCallback. NUnit extensions may also monitor these events.
+    /// AsyncCallback. BenchmarkSuite extensions may also monitor these events.
     /// </summary>
     public interface ITestListener
     {

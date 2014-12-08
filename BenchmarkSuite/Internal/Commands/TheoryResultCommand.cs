@@ -21,9 +21,9 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
 
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// TheoryResultCommand adjusts the result of a Theory so that

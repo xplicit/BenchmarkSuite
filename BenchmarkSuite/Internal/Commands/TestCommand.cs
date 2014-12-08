@@ -24,7 +24,7 @@ using BenchmarkSuite;
 using System.Collections.Generic;
 using System;
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// TestCommand is the abstract base class for all test commands

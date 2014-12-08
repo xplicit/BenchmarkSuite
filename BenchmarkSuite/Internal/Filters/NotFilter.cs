@@ -22,9 +22,9 @@
 // ***********************************************************************
 
 using System;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Filters
+namespace BenchmarkSuite.Framework.Internal.Filters
 {
     /// <summary>
     /// NotFilter negates the operation of another filter

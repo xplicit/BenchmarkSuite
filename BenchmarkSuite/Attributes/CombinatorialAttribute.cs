@@ -23,10 +23,10 @@
 
 using System;
 using System.Collections;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal.Builders;
+using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Framework.Internal.Builders;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     /// <summary>
     /// Marks a test to use a combinatorial join of any argument 

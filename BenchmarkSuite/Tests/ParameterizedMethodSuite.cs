@@ -23,7 +23,7 @@
 
 using System.Reflection;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// ParameterizedMethodSuite holds a collection of individual

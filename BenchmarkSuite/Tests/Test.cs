@@ -23,9 +23,9 @@
 
 using System;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// The Test abstract class represents a test within the framework.
@@ -235,7 +235,7 @@ namespace NUnit.Framework.Internal
 
 		#if PORTABLE
 		/// <summary>
-		/// Modify a newly constructed test by applying any of NUnit's common
+		/// Modify a newly constructed test by applying any of BenchmarkSuite's common
 		/// attributes, based on a supplied ICustomAttributeProvider, which is
 		/// usually the reflection element from which the test was constructed,
 		/// but may not be in some instances. The attributes retrieved are 
@@ -245,7 +245,7 @@ namespace NUnit.Framework.Internal
 		public void ApplyAttributesToTest(MemberInfo provider)
 		#else
 		/// <summary>
-		/// Modify a newly constructed test by applying any of NUnit's common
+		/// Modify a newly constructed test by applying any of BenchmarkSuite's common
 		/// attributes, based on a supplied ICustomAttributeProvider, which is
 		/// usually the reflection element from which the test was constructed,
 		/// but may not be in some instances. The attributes retrieved are 
@@ -261,7 +261,7 @@ namespace NUnit.Framework.Internal
 
 		#if PORTABLE
 		/// <summary>
-		/// Modify a newly constructed test by applying any of NUnit's common
+		/// Modify a newly constructed test by applying any of BenchmarkSuite's common
 		/// attributes, based on a supplied ICustomAttributeProvider, which is
 		/// usually the reflection element from which the test was constructed,
 		/// but may not be in some instances. The attributes retrieved are 

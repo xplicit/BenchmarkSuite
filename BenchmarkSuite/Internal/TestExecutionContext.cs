@@ -28,15 +28,15 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Reflection;
 using System.Threading;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal.Execution;
+using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Framework.Internal.Execution;
 
 #if !SILVERLIGHT && !NETCF && !PORTABLE
 using System.Runtime.Remoting.Messaging;
 using System.Security.Principal;
 #endif
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// Enumeration indicating whether the tests are 
@@ -194,7 +194,7 @@ namespace NUnit.Framework.Internal
 #elif NETCF
         private static TestExecutionContext current;
 #else
-        private static readonly string CONTEXT_KEY = "NUnit.Framework.TestContext";
+        private static readonly string CONTEXT_KEY = "BenchmarkSuite.Framework.TestContext";
 #endif
 
         /// <summary>

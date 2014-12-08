@@ -24,9 +24,9 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
 	/// <summary>
 	/// Class to build ether a parameterized or a normal NUnitTestMethod.
@@ -46,7 +46,7 @@ namespace NUnit.Framework.Internal.Builders
 
 		#region ITestCaseBuilder Methods
 		/// <summary>
-		/// Determines if the method can be used to build an NUnit test
+		/// Determines if the method can be used to build an BenchmarkSuite test
 		/// test method of some kind. The method must normally be marked
 		/// with an identifying attriute for this to be true.
 		/// 
@@ -83,7 +83,7 @@ namespace NUnit.Framework.Internal.Builders
 		#region ITestCaseBuilder2 Members
 
 		/// <summary>
-		/// Determines if the method can be used to build an NUnit test
+		/// Determines if the method can be used to build an BenchmarkSuite test
 		/// test method of some kind. The method must normally be marked
 		/// with an identifying attriute for this to be true.
 		/// 

@@ -1,9 +1,9 @@
 ﻿using System;
-using NUnit.Framework.Api;
-using NUnit.Framework.Interfaces;
-using NUnit.ConsoleRunner.Options;
+using BenchmarkSuite.Framework.Api;
+using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.ConsoleRunner.Options;
 using System.Collections.Generic;
-using NUnit.Framework.Internal;
+using BenchmarkSuite.Framework.Internal;
 
 namespace BenchmarkSuite.Runner
 {

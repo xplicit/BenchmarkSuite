@@ -23,11 +23,11 @@
 
 using System;
 using System.Collections;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal;
-using NUnit.Framework.Internal.Builders;
+using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Framework.Internal;
+using BenchmarkSuite.Framework.Internal.Builders;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     /// <example>
     /// [TestFixture]

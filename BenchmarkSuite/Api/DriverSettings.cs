@@ -21,7 +21,7 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
 
-namespace NUnit.Framework.Api
+namespace BenchmarkSuite.Framework.Api
 {
 	/// <summary>
 	/// DriverSettings is a static class containing constant values that

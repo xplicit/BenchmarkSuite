@@ -25,9 +25,9 @@ using System;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
     /// <summary>
     /// ParameterDataProvider supplies individual argument _values for

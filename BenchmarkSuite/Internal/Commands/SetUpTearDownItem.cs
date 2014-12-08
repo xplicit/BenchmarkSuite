@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// SetUpTearDownItem holds the setup and teardown methods
@@ -75,7 +75,7 @@ namespace NUnit.Framework.Internal.Commands
         /// <param name="context"></param>
         public void RunTearDown(TestExecutionContext context)
         {
-            // As of NUnit 3.0, we will only run teardown at a given
+            // As of BenchmarkSuite 3.0, we will only run teardown at a given
             // inheritance level if we actually ran setup at that level.
             if (_setUpWasRun)
                 try

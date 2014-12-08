@@ -23,7 +23,7 @@
 
 using System;
 using System.Threading;
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// ContextSettingsCommand applies specified changes to the

@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// OneTimeTearDownCommand performs any teardown actions

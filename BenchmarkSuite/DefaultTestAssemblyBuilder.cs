@@ -25,13 +25,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal;
-using NUnit.Framework.Internal.Builders;
-using NUnit.Common;
+using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Framework.Internal;
+using BenchmarkSuite.Framework.Internal.Builders;
+using BenchmarkSuite.Common;
 using log4net;
 
-namespace NUnit.Framework.Api
+namespace BenchmarkSuite.Framework.Api
 {
 	/// <summary>
 	/// DefaultTestAssemblyBuilder loads a single assembly and builds a TestSuite

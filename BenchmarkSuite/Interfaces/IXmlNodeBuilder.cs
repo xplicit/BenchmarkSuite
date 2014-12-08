@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
 	/// <summary>
 	/// An object implementing IXmlNodeBuilder is able to build 

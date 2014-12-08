@@ -23,7 +23,7 @@
 
 using System.Text;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
 	/// <summary>
 	/// The ResultState class represents the outcome of running a test.

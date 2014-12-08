@@ -26,12 +26,12 @@ using System.Collections;
 using System.IO;
 using System.Reflection;
 using System.Threading;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal;
-using NUnit.Framework.Internal.Execution;
+using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Framework.Internal;
+using BenchmarkSuite.Framework.Internal.Execution;
 using log4net;
 
-namespace NUnit.Framework.Api
+namespace BenchmarkSuite.Framework.Api
 {
     /// <summary>
     /// Implementation of ITestAssemblyRunner

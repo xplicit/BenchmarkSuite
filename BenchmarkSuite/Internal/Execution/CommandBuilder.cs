@@ -25,7 +25,7 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 
-namespace NUnit.Framework.Internal.Execution
+namespace BenchmarkSuite.Framework.Internal.Execution
 {
     using Commands;
     using Interfaces;
@@ -134,7 +134,7 @@ namespace NUnit.Framework.Internal.Execution
         }
 
         // This method builds a list of nodes that can be used to 
-        // run setup and teardown according to the NUnit specs.
+        // run setup and teardown according to the BenchmarkSuite specs.
         // We need to execute setup and teardown methods one level
         // at a time. However, we can't discover them by reflection
         // one level at a time, because that would cause overridden

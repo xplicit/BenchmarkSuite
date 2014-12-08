@@ -23,9 +23,9 @@
 
 using System.Collections.Generic;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
     /// <summary>
     /// The TestMethod class represents a Test implemented as a method.

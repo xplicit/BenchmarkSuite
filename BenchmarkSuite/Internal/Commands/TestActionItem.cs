@@ -22,7 +22,7 @@
 // ***********************************************************************
 
 
-namespace NUnit.Framework.Internal.Commands
+namespace BenchmarkSuite.Framework.Internal.Commands
 {
     /// <summary>
     /// TestActionItem represents a single execution of an

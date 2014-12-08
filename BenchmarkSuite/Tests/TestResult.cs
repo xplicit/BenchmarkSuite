@@ -25,11 +25,11 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 using BenchmarkSuite;
 using System.Collections.Generic;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// The TestResult class represents the result of a test.
@@ -479,11 +479,11 @@ namespace NUnit.Framework.Internal
 
 			string message = "TearDown : " + ExceptionHelper.BuildMessage(ex);
 			if (this.Message != null)
-				message = this.Message + NUnit.Env.NewLine + message;
+				message = this.Message + BenchmarkSuite.Env.NewLine + message;
 
-			string stackTrace = "--TearDown" + NUnit.Env.NewLine + ExceptionHelper.BuildStackTrace(ex);
+			string stackTrace = "--TearDown" + BenchmarkSuite.Env.NewLine + ExceptionHelper.BuildStackTrace(ex);
 			if (this.StackTrace != null)
-				stackTrace = this.StackTrace + NUnit.Env.NewLine + stackTrace;
+				stackTrace = this.StackTrace + BenchmarkSuite.Env.NewLine + stackTrace;
 
 			SetResult(resultState, message, stackTrace);
 		}

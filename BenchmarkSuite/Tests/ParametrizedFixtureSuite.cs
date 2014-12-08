@@ -23,7 +23,7 @@
 
 using System;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// ParameterizedFixtureSuite serves as a container for the set of test 

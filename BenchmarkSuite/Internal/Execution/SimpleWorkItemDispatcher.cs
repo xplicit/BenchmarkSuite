@@ -25,7 +25,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 
-namespace NUnit.Framework.Internal.Execution
+namespace BenchmarkSuite.Framework.Internal.Execution
 {
     /// <summary>
     /// SimpleWorkItemDispatcher handles execution of WorkItems by

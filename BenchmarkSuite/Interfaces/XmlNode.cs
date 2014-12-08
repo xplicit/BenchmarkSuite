@@ -24,7 +24,7 @@
 using System;
 using BenchmarkSuite.Common;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
 	/// <summary>
 	/// XmlNode represents a single node in the XML representation
@@ -184,7 +184,7 @@ namespace NUnit.Framework.Interfaces
 		/// <summary>
 		/// Finds a single descendant of this node matching an xpath
 		/// specification. The format of the specification is
-		/// limited to what is needed by NUnit and its tests.
+		/// limited to what is needed by BenchmarkSuite and its tests.
 		/// </summary>
 		/// <param name="xpath"></param>
 		/// <returns></returns>
@@ -200,7 +200,7 @@ namespace NUnit.Framework.Interfaces
 		/// <summary>
 		/// Finds all descendants of this node matching an xpath
 		/// specification. The format of the specification is
-		/// limited to what is needed by NUnit and its tests.
+		/// limited to what is needed by BenchmarkSuite and its tests.
 		/// </summary>
 		/// <param name="xpath"></param>
 		/// <returns></returns>

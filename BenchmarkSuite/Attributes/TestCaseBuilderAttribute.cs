@@ -23,10 +23,10 @@
 
 using System;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     /// <summary>
-    /// The abstract base class for all NUnit attributes that build test cases.
+    /// The abstract base class for all BenchmarkSuite attributes that build test cases.
     /// The derived class should implement one of the test builder interfaces.
     /// </summary>
     public abstract class TestCaseBuilderAttribute : BenchBaseAttribute

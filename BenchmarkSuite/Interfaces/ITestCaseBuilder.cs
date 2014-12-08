@@ -22,16 +22,16 @@
 // ***********************************************************************
 
 using System.Reflection;
-using NUnit.Framework.Internal;
+using BenchmarkSuite.Framework.Internal;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
 	/// <summary>
 	/// The ITestCaseBuilder interface is exposed by a class that knows how to
 	/// build a test case from certain methods. 
 	/// </summary>
 	/// <remarks>
-	/// This interface is not the same as the ITestCaseBuilder interface in NUnit 2.x.
+	/// This interface is not the same as the ITestCaseBuilder interface in BenchmarkSuite 2.x.
 	/// We have reused the name because the two products don't interoperate at all.
 	/// </remarks>
 	public interface ITestCaseBuilder

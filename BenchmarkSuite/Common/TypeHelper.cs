@@ -28,7 +28,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// TypeHelper provides static methods that operate on Types.
@@ -36,7 +36,7 @@ namespace NUnit.Framework.Internal
 	public class TypeHelper
 	{
 		/// <summary>
-		/// Gets the display name for a Type as used by NUnit.
+		/// Gets the display name for a Type as used by BenchmarkSuite.
 		/// </summary>
 		/// <param name="type">The Type for which a display name is needed.</param>
 		/// <returns>The display name for the Type</returns>
@@ -78,7 +78,7 @@ namespace NUnit.Framework.Internal
 		}
 
 		/// <summary>
-		/// Gets the display name for a Type as used by NUnit.
+		/// Gets the display name for a Type as used by BenchmarkSuite.
 		/// </summary>
 		/// <param name="type">The Type for which a display name is needed.</param>
 		/// <param name="arglist">The arglist provided.</param>

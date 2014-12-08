@@ -24,7 +24,7 @@
 using System;
 using System.Reflection;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
 	/// <summary>
 	/// Common interface supported by all representations

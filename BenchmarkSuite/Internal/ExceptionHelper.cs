@@ -26,7 +26,7 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NUnit.Framework.Internal
+namespace BenchmarkSuite.Framework.Internal
 {
 	/// <summary>
 	/// ExceptionHelper provides static methods for working with exceptions
@@ -47,7 +47,7 @@ namespace NUnit.Framework.Internal
 
 			foreach (Exception inner in FlattenExceptionHierarchy(exception))
 			{
-				sb.Append(NUnit.Env.NewLine);
+				sb.Append(BenchmarkSuite.Env.NewLine);
 				sb.AppendFormat(CultureInfo.CurrentCulture, "  ----> {0} : {1}", inner.GetType().ToString(), inner.Message);
 			}
 
@@ -66,10 +66,10 @@ namespace NUnit.Framework.Internal
 
 			foreach (Exception inner in FlattenExceptionHierarchy(exception))
 			{
-				sb.Append(NUnit.Env.NewLine);
+				sb.Append(BenchmarkSuite.Env.NewLine);
 				sb.Append("--");
 				sb.Append(inner.GetType().Name);
-				sb.Append(NUnit.Env.NewLine);
+				sb.Append(BenchmarkSuite.Env.NewLine);
 				sb.Append(GetStackTrace(inner));
 			}
 

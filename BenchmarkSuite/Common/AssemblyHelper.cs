@@ -25,7 +25,7 @@ using System;
 using System.Reflection;
 
 
-namespace NUnit.Common
+namespace BenchmarkSuite.Common
 {
 	/// <summary>
 	/// AssemblyHelper provides static methods for working 

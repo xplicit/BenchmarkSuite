@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using BenchmarkSuite;
 
-namespace NUnit.Framework.Interfaces
+namespace BenchmarkSuite.Framework.Interfaces
 {
 	/// <summary>
 	/// The ITestResult interface represents the result of a test.

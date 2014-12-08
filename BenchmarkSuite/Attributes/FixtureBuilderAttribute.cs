@@ -23,10 +23,10 @@
 
 using System;
 
-namespace NUnit.Framework
+namespace BenchmarkSuite.Framework
 {
     /// <summary>
-    /// The abstract base class for all NUnit attributes that build fixtures.
+    /// The abstract base class for all BenchmarkSuite attributes that build fixtures.
     /// The derived class should implement IFixtureBuilder. It is not implemented
     /// by this class to allow for future fixture-building interfaces.
     /// </summary>

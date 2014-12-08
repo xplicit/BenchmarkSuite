@@ -24,9 +24,9 @@ using System;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
     /// <summary>
     /// Provides data from fields marked with the DatapointAttribute or the

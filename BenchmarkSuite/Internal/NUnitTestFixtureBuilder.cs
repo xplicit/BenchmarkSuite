@@ -24,9 +24,9 @@
 using System;
 using System.Collections;
 using System.Reflection;
-using NUnit.Framework.Interfaces;
+using BenchmarkSuite.Framework.Interfaces;
 
-namespace NUnit.Framework.Internal.Builders
+namespace BenchmarkSuite.Framework.Internal.Builders
 {
 	/// <summary>
 	/// NUnitTestFixtureBuilder is able to build a fixture given
@@ -41,7 +41,7 @@ namespace NUnit.Framework.Internal.Builders
 
 		static readonly string NO_TYPE_ARGS_MSG =
 			"Fixture type contains generic parameters. You must either provide " +
-			"Type arguments or specify constructor arguments that allow NUnit " +
+			"Type arguments or specify constructor arguments that allow BenchmarkSuite " +
 			"to deduce the Type arguments.";
 
 		#endregion
