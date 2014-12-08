@@ -22,6 +22,8 @@
 // ***********************************************************************
 
 using System;
+using System.Collections.Generic;
+using BenchmarkSuite;
 
 namespace NUnit.Framework.Interfaces
 {
@@ -35,6 +37,11 @@ namespace NUnit.Framework.Interfaces
 		/// indicates the success or failure of the test.
 		/// </summary>
 		ResultState ResultState
+		{
+			get;
+		}
+
+		IList<BenchmarkResult> BenchmarkResults 
 		{
 			get;
 		}

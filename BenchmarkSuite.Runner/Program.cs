@@ -40,7 +40,28 @@ namespace BenchmarkSuite.Runner
 			}
 			b.Stop ();
 
+            PrintBenchmarks(result);
 			Console.WriteLine ("Benchmark '{0}' ms='{1}'", b.Name, b.ElapsedTicks);
 		}
+
+        public static void PrintBenchmarks(ITestResult result)
+        {
+            foreach (BenchmarkResult br in result.BenchmarkResults)
+            {
+                Console.WriteLine("Name={0}, Mean={1}, StdDev={2}", br.Name, br.Mean, br.StdDev);
+                foreach (Benchmark b in br.Benchmarks)
+                {
+                    Console.WriteLine("Name={0}, Elapsed={1}", b.Name, b.ElapsedTicks);
+                }
+            }
+
+            if (result.HasChildren)
+            {
+                foreach (ITestResult child in result.Children)
+                {
+                    PrintBenchmarks(child);
+                }
+            }
+        }
 	}
 }

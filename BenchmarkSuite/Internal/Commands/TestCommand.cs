@@ -20,6 +20,9 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
+using BenchmarkSuite;
+using System.Collections.Generic;
+using System;
 
 namespace NUnit.Framework.Internal.Commands
 {
@@ -47,7 +50,18 @@ namespace NUnit.Framework.Internal.Commands
             this.Test = test;
         }
 
+		[ThreadStatic] static IList<Benchmark> benchmarks;
+
         #region Public Methods
+		public static IList<Benchmark> Benchmarks
+		{ 
+			get { 
+				if (benchmarks == null) {
+					benchmarks = new List<Benchmark> ();
+				}
+				return benchmarks;
+			} 
+		}
 
         /// <summary>
         /// Gets the test associated with this command.

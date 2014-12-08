@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using NUnit.Framework.Internal.Commands;
 
 namespace BenchmarkSuite
 {
@@ -15,17 +16,20 @@ namespace BenchmarkSuite
 		public Benchmark ()
 		{
 			Name = new StackFrame (1, true).GetMethod ().Name;
+			TestCommand.Benchmarks.Add (this);
 		}
 
 		public Benchmark(string name)
 		{
 			Name = name;
+			TestCommand.Benchmarks.Add (this);
 		}
+
 
 		public void Start()
 		{
-			GC.Collect ();
-			GC.WaitForPendingFinalizers ();
+//			GC.Collect ();
+//			GC.WaitForPendingFinalizers ();
 
 			sw.Start ();
 		}

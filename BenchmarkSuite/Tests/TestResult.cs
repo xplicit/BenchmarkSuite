@@ -26,6 +26,8 @@ using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 using NUnit.Framework.Interfaces;
+using BenchmarkSuite;
+using System.Collections.Generic;
 
 namespace NUnit.Framework.Internal
 {
@@ -67,6 +69,7 @@ namespace NUnit.Framework.Internal
 		{
 			this.Test = test;
 			this.ResultState = ResultState.Inconclusive;
+			this.BenchmarkResults = new List<BenchmarkResult> ();
 		}
 
 		#endregion
@@ -83,6 +86,8 @@ namespace NUnit.Framework.Internal
 		/// indicates the success or failure of the test.
 		/// </summary>
 		public ResultState ResultState { get; private set; }
+
+		public IList<BenchmarkResult> BenchmarkResults { get; private set; }
 
 		/// <summary>
 		/// Gets the name of the test result

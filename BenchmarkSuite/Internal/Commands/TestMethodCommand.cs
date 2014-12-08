@@ -24,6 +24,7 @@
 using System;
 using System.Reflection;
 using NUnit.Framework.Interfaces;
+using BenchmarkSuite;
 
 namespace NUnit.Framework.Internal.Commands
 {
@@ -59,13 +60,24 @@ namespace NUnit.Framework.Internal.Commands
         {
             var thisThread = System.Threading.Thread.CurrentThread.ManagedThreadId;
             // TODO: Decide if we should handle exceptions here
-            object result = RunTestMethod(context);
-
+            for (int i = 0; i < 6; i++)
+            {
+                object result = RunTestMethod(context);
+            }
 			//TODO: write bench
 //            if (testMethod.HasExpectedResult)
 //                NUnit.Framework.Assert.AreEqual(testMethod.ExpectedResult, result);
 
             context.CurrentResult.SetResult(ResultState.Success);
+
+            var results = BenchmarkResult.CalculateResults(Benchmarks);
+            Benchmarks.Clear ();
+
+            foreach (BenchmarkResult br in results)
+            {
+                context.CurrentResult.BenchmarkResults.Add(br);
+            }
+
             // TODO: Set assert count here?
             //context.CurrentResult.AssertCount = context.AssertCount;
             return context.CurrentResult;
