@@ -4,7 +4,7 @@ using BenchmarkSuite.Framework;
 
 namespace BenchmarkSuite.Tests
 {
-	[BenchFixtureAttribute]
+	[BenchFixture]
 	public class MyClass
 	{
 		public MyClass ()

@@ -28,8 +28,8 @@ namespace BenchmarkSuite
 
 		public void Start()
 		{
-//			GC.Collect ();
-//			GC.WaitForPendingFinalizers ();
+			GC.Collect ();
+			GC.WaitForPendingFinalizers ();
 
 			sw.Start ();
 		}
