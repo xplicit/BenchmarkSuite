@@ -21,6 +21,7 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
 using System;
+using BenchmarkSuite.Framework.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {

@@ -25,6 +25,7 @@ using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Framework.Common;
 
 namespace BenchmarkSuite.Framework.Internal.Builders
 {

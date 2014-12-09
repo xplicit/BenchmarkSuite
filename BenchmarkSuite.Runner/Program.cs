@@ -40,8 +40,19 @@ namespace BenchmarkSuite.Runner
 			}
 			b.Stop ();
 
+            Benchmark b1 = new Benchmark (); 
+
+            x = 0;
+
+            b1.Start ();
+            for (int i = 0; i < 1000000; i++) {
+                x += 1;
+            }
+//            b1.Stop ();
+
             PrintBenchmarks(result);
-			Console.WriteLine ("Benchmark '{0}' ms='{1}'", b.Name, b.ElapsedTicks);
+			Console.WriteLine ("Benchmark b '{0}' ms='{1}'", b.Name, b.ElapsedTicks);
+//            Console.WriteLine ("Benchmark b1 '{0}' ms='{1}'", b1.Name, b1.ElapsedTicks);
 		}
 
         public static void PrintBenchmarks(ITestResult result)

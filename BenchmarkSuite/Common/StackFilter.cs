@@ -25,7 +25,7 @@ using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace BenchmarkSuite.Framework.Internal
+namespace BenchmarkSuite.Framework.Common
 {
 	/// <summary>
 	/// StackFilter class is used to remove internal BenchmarkSuite

@@ -13,6 +13,8 @@ namespace BenchmarkSuite
 
 		public long ElapsedTicks { get { return elapsed; } }
 
+        public long ElapsedMilleseconds { get { return elapsed * 1000 / Stopwatch.Frequency; } }
+
 		public Benchmark ()
 		{
 			Name = new StackFrame (1, true).GetMethod ().Name;
@@ -25,6 +27,18 @@ namespace BenchmarkSuite
 			TestCommand.Benchmarks.Add (this);
 		}
 
+        public static Benchmark StartNew()
+        {
+            string name = new StackFrame (1, true).GetMethod ().Name;
+            return Benchmark.StartNew(name);
+        }
+
+        public static Benchmark StartNew(string name)
+        {
+            Benchmark b = new Benchmark(name);
+            b.Start();
+            return b;
+        }
 
 		public void Start()
 		{

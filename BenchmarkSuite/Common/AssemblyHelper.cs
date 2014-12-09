@@ -25,7 +25,7 @@ using System;
 using System.Reflection;
 
 
-namespace BenchmarkSuite.Common
+namespace BenchmarkSuite.Framework.Common
 {
 	/// <summary>
 	/// AssemblyHelper provides static methods for working 

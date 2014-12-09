@@ -24,7 +24,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using BenchmarkSuite.Common;
+using BenchmarkSuite.Framework.Common;
 
 namespace BenchmarkSuite.Framework.Internal.Commands
 {

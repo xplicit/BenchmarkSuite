@@ -154,6 +154,47 @@
     <Compile Include="Attributes\BenchAttribute.cs" />
     <Compile Include="Attributes\BenchFixtureAttribute.cs" />
     <Compile Include="Attributes\BenchBaseAttribute.cs" />
+    <Compile Include="Attributes\AuthorAttribute.cs" />
+    <Compile Include="Attributes\CategoryAttribute.cs" />
+    <Compile Include="Attributes\CultureAttribute.cs" />
+    <Compile Include="Attributes\DataAttribute.cs" />
+    <Compile Include="Attributes\DatapointsAttribute.cs" />
+    <Compile Include="Attributes\DescriptionAttribute.cs" />
+    <Compile Include="Attributes\ExplicitAttribute.cs" />
+    <Compile Include="Attributes\IgnoreAttribute.cs" />
+    <Compile Include="Attributes\IncludeExcludeAttribute.cs" />
+    <Compile Include="Attributes\LevelOfParallelizationAttribute.cs" />
+    <Compile Include="Attributes\MaxTimeAttribute.cs" />
+    <Compile Include="Attributes\PairwiseAttribute.cs" />
+    <Compile Include="Attributes\ParallelScope.cs" />
+    <Compile Include="Attributes\ParallelizableAttribute.cs" />
+    <Compile Include="Attributes\PlatformAttribute.cs" />
+    <Compile Include="Attributes\PropertyAttribute.cs" />
+    <Compile Include="Attributes\RandomAttribute.cs" />
+    <Compile Include="Attributes\RangeAttribute.cs" />
+    <Compile Include="Attributes\RepeatAttribute.cs" />
+    <Compile Include="Attributes\RequiresMTAAtribute.cs" />
+    <Compile Include="Attributes\RequiresSTAAttribute.cs" />
+    <Compile Include="Attributes\RequiresThreadAttribute.cs" />
+    <Compile Include="Attributes\SequentialAttribute.cs" />
+    <Compile Include="Attributes\SetCultureAttribute.cs" />
+    <Compile Include="Attributes\SetUICultureAttribute.cs" />
+    <Compile Include="Attributes\TestActionAttribute.cs" />
+    <Compile Include="Attributes\TestAttribute.cs" />
+    <Compile Include="Attributes\TestCaseAttribute.cs" />
+    <Compile Include="Attributes\TestCaseSourceAttribute.cs" />
+    <Compile Include="Attributes\TestOfAttribute.cs" />
+    <Compile Include="Attributes\TimeoutAttribute.cs" />
+    <Compile Include="Attributes\ValueSourceAttribute.cs" />
+    <Compile Include="Attributes\ValuesAttribute.cs" />
+    <Compile Include="Common\PlatformHelper.cs" />
+    <Compile Include="Common\OSPlatform.cs" />
+    <Compile Include="Common\RuntimeFramework.cs" />
+    <Compile Include="Common\CultureDetector.cs" />
+    <Compile Include="Common\SpecialValue.cs" />
+    <Compile Include="Internal\Commands\MaxTimeCommand.cs" />
+    <Compile Include="PairwiseStrategy.cs" />
+    <Compile Include="SequentialStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -167,5 +208,8 @@
     <Folder Include="Internal\Execution\" />
     <Folder Include="Internal\Commands\" />
     <Folder Include="Internal\Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Attributes\AttributeHierarchy.txt" />
   </ItemGroup>
 </Project>

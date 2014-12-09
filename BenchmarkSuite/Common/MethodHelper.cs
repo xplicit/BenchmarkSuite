@@ -25,7 +25,7 @@ using System;
 using System.Reflection;
 using System.Text;
 
-namespace BenchmarkSuite.Framework.Internal
+namespace BenchmarkSuite.Framework.Common
 {
     /// <summary>
     /// MethodHelper provides static methods for working with methods.

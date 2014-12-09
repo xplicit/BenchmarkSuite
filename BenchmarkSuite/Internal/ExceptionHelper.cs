@@ -25,6 +25,7 @@ using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
+using BenchmarkSuite.Framework.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {
@@ -47,7 +48,7 @@ namespace BenchmarkSuite.Framework.Internal
 
 			foreach (Exception inner in FlattenExceptionHierarchy(exception))
 			{
-				sb.Append(BenchmarkSuite.Env.NewLine);
+				sb.Append(Env.NewLine);
 				sb.AppendFormat(CultureInfo.CurrentCulture, "  ----> {0} : {1}", inner.GetType().ToString(), inner.Message);
 			}
 
@@ -66,10 +67,10 @@ namespace BenchmarkSuite.Framework.Internal
 
 			foreach (Exception inner in FlattenExceptionHierarchy(exception))
 			{
-				sb.Append(BenchmarkSuite.Env.NewLine);
+				sb.Append(Env.NewLine);
 				sb.Append("--");
 				sb.Append(inner.GetType().Name);
-				sb.Append(BenchmarkSuite.Env.NewLine);
+				sb.Append(Env.NewLine);
 				sb.Append(GetStackTrace(inner));
 			}
 

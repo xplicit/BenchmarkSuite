@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 namespace BenchmarkSuite
 {
@@ -56,9 +57,19 @@ namespace BenchmarkSuite
                     br.StdDev += ((double)b.ElapsedTicks - br.Mean) * ((double)b.ElapsedTicks - br.Mean);
                 }
                 br.StdDev = Math.Sqrt((br.StdDev / (double)(br.Count)));
+
+                //convert final results to milliseconds
+                br.Mean = ToMilliseconds(br.Mean);
+                br.StdDev = ToMilliseconds(br.StdDev);
             }
 
+
             return results;
+        }
+
+        public static double ToMilliseconds(double ticks)
+        {
+            return ticks / (double)(Stopwatch.Frequency / 1000);
         }
     }
 }

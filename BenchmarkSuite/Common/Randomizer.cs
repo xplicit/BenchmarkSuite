@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace BenchmarkSuite.Framework.Internal
+namespace BenchmarkSuite.Framework.Common
 {
     /// <summary>
     /// Randomizer returns a set of random _values in a repeatable

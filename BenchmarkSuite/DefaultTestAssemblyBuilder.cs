@@ -28,7 +28,7 @@ using System.Reflection;
 using BenchmarkSuite.Framework.Interfaces;
 using BenchmarkSuite.Framework.Internal;
 using BenchmarkSuite.Framework.Internal.Builders;
-using BenchmarkSuite.Common;
+using BenchmarkSuite.Framework.Common;
 using log4net;
 
 namespace BenchmarkSuite.Framework.Api

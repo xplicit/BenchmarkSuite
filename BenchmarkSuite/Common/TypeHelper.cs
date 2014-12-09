@@ -28,7 +28,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace BenchmarkSuite.Framework.Internal
+namespace BenchmarkSuite.Framework.Common
 {
 	/// <summary>
 	/// TypeHelper provides static methods that operate on Types.

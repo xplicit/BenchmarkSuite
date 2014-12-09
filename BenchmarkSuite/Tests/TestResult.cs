@@ -28,6 +28,7 @@ using System.Text.RegularExpressions;
 using BenchmarkSuite.Framework.Interfaces;
 using BenchmarkSuite;
 using System.Collections.Generic;
+using BenchmarkSuite.Framework.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {
@@ -479,11 +480,11 @@ namespace BenchmarkSuite.Framework.Internal
 
 			string message = "TearDown : " + ExceptionHelper.BuildMessage(ex);
 			if (this.Message != null)
-				message = this.Message + BenchmarkSuite.Env.NewLine + message;
+				message = this.Message + Env.NewLine + message;
 
-			string stackTrace = "--TearDown" + BenchmarkSuite.Env.NewLine + ExceptionHelper.BuildStackTrace(ex);
+			string stackTrace = "--TearDown" + Env.NewLine + ExceptionHelper.BuildStackTrace(ex);
 			if (this.StackTrace != null)
-				stackTrace = this.StackTrace + BenchmarkSuite.Env.NewLine + stackTrace;
+				stackTrace = this.StackTrace + Env.NewLine + stackTrace;
 
 			SetResult(resultState, message, stackTrace);
 		}

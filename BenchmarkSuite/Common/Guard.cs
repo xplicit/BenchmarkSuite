@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BenchmarkSuite.Common
+namespace BenchmarkSuite.Framework.Common
 {
 	/// <summary>
 	/// Class used to guard against unexpected argument values

@@ -22,6 +22,7 @@
 // ***********************************************************************
 
 using System;
+using BenchmarkSuite.Framework.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {

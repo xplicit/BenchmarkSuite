@@ -22,7 +22,7 @@
 // ***********************************************************************
 
 using System;
-using BenchmarkSuite.Common;
+using BenchmarkSuite.Framework.Common;
 
 namespace BenchmarkSuite.Framework.Interfaces
 {
