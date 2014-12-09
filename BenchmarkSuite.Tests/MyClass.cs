@@ -7,6 +7,8 @@ namespace BenchmarkSuite.Tests
 	[BenchFixture]
 	public class MyClass
 	{
+        const int nIter=100000000;
+
 		public MyClass ()
 		{
 		}
@@ -20,7 +22,7 @@ namespace BenchmarkSuite.Tests
 			int x = 0;
 
 			b.Start ();
-			for (int i = 0; i < 1000000; i++) {
+            for (int i = 0; i < nIter; i++) {
 				x += 1;
 			}
 			b.Stop ();
@@ -36,7 +38,7 @@ namespace BenchmarkSuite.Tests
 			int x = 0;
 
 			b.Start ();
-			for (int i = 0; i < 1000000; i++) {
+            for (int i = 0; i < nIter; i++) {
 				x += 1;
 			}
 			b.Stop ();

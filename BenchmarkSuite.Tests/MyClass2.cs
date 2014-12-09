@@ -6,6 +6,8 @@ namespace BenchmarkSuite.Tests
 	[BenchFixture]
 	public class MyClass2
 	{
+        const int nIter = 10000000;
+
 		public MyClass2 ()
 		{
 		}
@@ -17,7 +19,7 @@ namespace BenchmarkSuite.Tests
             int h;
 
             var b = Benchmark.StartNew();
-            for (int i = 0; i < 100000; i++)
+            for (int i = 0; i < nIter; i++)
             {
                 h = s.GetHashCode();
             }

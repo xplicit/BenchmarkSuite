@@ -59,7 +59,7 @@ namespace BenchmarkSuite.Runner
         {
             foreach (BenchmarkResult br in result.BenchmarkResults)
             {
-                Console.WriteLine("Name={0}, Mean={1}, StdDev={2}", br.Name, br.Mean, br.StdDev);
+                Console.WriteLine("Name={0}, Mean={1}, Min={2}, Max={3}, StdDev={4}, StdDev%={5}", br.Name, br.Mean, br.Min, br.Max, br.StdDev, br.StdDevPercents);
                 foreach (Benchmark b in br.Benchmarks)
                 {
                     Console.WriteLine("Name={0}, Elapsed={1}", b.Name, b.ElapsedTicks);
