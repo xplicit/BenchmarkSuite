@@ -88,6 +88,9 @@ namespace BenchmarkSuite.Framework.Internal
 		/// </summary>
 		public ResultState ResultState { get; private set; }
 
+        /// <summary>
+        /// Gets the benchmarkings of the test.
+        /// </summary>
 		public IList<BenchmarkResult> BenchmarkResults { get; private set; }
 
 		/// <summary>
@@ -296,6 +299,13 @@ namespace BenchmarkSuite.Framework.Internal
 			if (recursive && HasChildren)
 				foreach (TestResult child in Children)
 					child.AddToXml(thisNode, recursive);
+
+            if (BenchmarkResults != null)
+            {
+                XmlNode brs = thisNode.AddElement("benchmark-results");
+                foreach (BenchmarkResult br in BenchmarkResults)
+                    br.AddToXml(brs, false);
+            }
 
 			return thisNode;
 		}

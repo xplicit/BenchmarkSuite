@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
+using BenchmarkSuite.Framework.Interfaces;
 
 namespace BenchmarkSuite
 {
@@ -112,6 +113,34 @@ namespace BenchmarkSuite
         public static double ToMilliseconds(double ticks)
         {
             return ticks / (double)(Stopwatch.Frequency / 1000);
+        }
+
+        public virtual XmlNode AddToXml(XmlNode parentNode, bool recursive)
+        {
+            XmlNode thisNode = parentNode.AddElement("benchmark-result");
+
+            thisNode.AddAttribute("name", this.Name);
+            thisNode.AddAttribute("count", this.Count.ToString());
+            thisNode.AddAttribute("min", this.Min.ToString());
+            thisNode.AddAttribute("max", this.Max.ToString());
+            thisNode.AddAttribute("mean", this.Mean.ToString());
+            thisNode.AddAttribute("stddev", this.StdDev.ToString());
+            thisNode.AddAttribute("stddev-percent", this.StdDevPercents.ToString());
+
+            if (this.Benchmarks != null)
+            {
+                XmlNode bmNode = thisNode.AddElement("benchmarks");
+
+                foreach(Benchmark b in Benchmarks)
+                {
+                    XmlNode bNode = bmNode.AddElement("benchmark");
+                    bNode.Attributes.Add("name", b.Name);
+                    bNode.Attributes.Add("elapsed-ms", b.ElapsedMilleseconds.ToString());
+                    bNode.Attributes.Add("elapsed-ticks", b.ElapsedTicks.ToString());
+                }
+            }
+
+            return thisNode;
         }
     }
 }
