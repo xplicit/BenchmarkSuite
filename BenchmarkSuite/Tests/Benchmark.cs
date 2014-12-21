@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using BenchmarkSuite.Framework.Internal.Commands;
 
-namespace BenchmarkSuite
+namespace BenchmarkSuite.Framework
 {
 	public class Benchmark
 	{

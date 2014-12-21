@@ -4,7 +4,7 @@ using System.Linq;
 using System.Diagnostics;
 using BenchmarkSuite.Framework.Interfaces;
 
-namespace BenchmarkSuite
+namespace BenchmarkSuite.Framework.Internal
 {
     public class BenchmarkResult
     {

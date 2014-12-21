@@ -23,7 +23,7 @@
 
 using System;
 using System.Collections.Generic;
-using BenchmarkSuite;
+using BenchmarkSuite.Framework.Internal;
 
 namespace BenchmarkSuite.Framework.Interfaces
 {

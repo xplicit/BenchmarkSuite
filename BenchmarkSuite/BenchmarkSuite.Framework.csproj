@@ -36,7 +36,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Benchmark.cs" />
     <Compile Include="DefaultTestAssemblyBuilder.cs" />
     <Compile Include="DefaultSuiteBuilder.cs" />
     <Compile Include="Interfaces\ISuiteBuilder.cs" />
@@ -150,7 +149,6 @@
     <Compile Include="Internal\Filters\SimpleCategoryExpression.cs" />
     <Compile Include="Internal\Filters\SimpleNameFilter.cs" />
     <Compile Include="Internal\Filters\ValueMatchFilter.cs" />
-    <Compile Include="BenchmarkResult.cs" />
     <Compile Include="Attributes\BenchAttribute.cs" />
     <Compile Include="Attributes\BenchFixtureAttribute.cs" />
     <Compile Include="Attributes\BenchBaseAttribute.cs" />
@@ -195,6 +193,8 @@
     <Compile Include="Internal\Commands\MaxTimeCommand.cs" />
     <Compile Include="PairwiseStrategy.cs" />
     <Compile Include="SequentialStrategy.cs" />
+    <Compile Include="Tests\Benchmark.cs" />
+    <Compile Include="Tests\BenchmarkResult.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -300,7 +300,7 @@ namespace BenchmarkSuite.Framework.Internal
 				foreach (TestResult child in Children)
 					child.AddToXml(thisNode, recursive);
 
-            if (BenchmarkResults != null)
+            if (BenchmarkResults != null && BenchmarkResults.Count > 0)
             {
                 XmlNode brs = thisNode.AddElement("benchmark-results");
                 foreach (BenchmarkResult br in BenchmarkResults)
