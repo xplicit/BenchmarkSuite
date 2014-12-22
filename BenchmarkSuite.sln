@@ -1,16 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Framework", "BenchmarkSuite\BenchmarkSuite.Framework.csproj", "{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Runner", "BenchmarkSuite.Runner\BenchmarkSuite.Runner.csproj", "{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{21CC09ED-BB53-479C-B9F8-D038A0371776}"
 	ProjectSection(SolutionItems) = preProject
 		libs\log4net.dll = libs\log4net.dll
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Tests", "BenchmarkSuite.Tests\BenchmarkSuite.Tests.csproj", "{1E751CC8-4308-4F7D-9F4A-1F5AC4E9CD4C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{47872A22-9950-4ED7-912E-DBE8E250A989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Framework", "BenchmarkSuite\BenchmarkSuite.Framework.csproj", "{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.ConsoleRunner", "BenchmarkSuite.Runner\BenchmarkSuite.ConsoleRunner.csproj", "{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6B2DBC74-2A6F-4D91-8BE3-64366C6ADAEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Tests", "tests\BenchmarkSuite.Tests\BenchmarkSuite.Tests.csproj", "{1E751CC8-4308-4F7D-9F4A-1F5AC4E9CD4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +36,12 @@ Global
 		{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6} = {47872A22-9950-4ED7-912E-DBE8E250A989}
+		{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00} = {47872A22-9950-4ED7-912E-DBE8E250A989}
+		{1E751CC8-4308-4F7D-9F4A-1F5AC4E9CD4C} = {6B2DBC74-2A6F-4D91-8BE3-64366C6ADAEC}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = BenchmarkSuite.Runner\BenchmarkSuite.Runner.csproj
+		StartupItem = BenchmarkSuite.Runner\BenchmarkSuite.ConsoleRunner.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
 		$1.inheritsSet = VisualStudio
