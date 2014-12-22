@@ -8,9 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{21CC09ED-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{47872A22-9950-4ED7-912E-DBE8E250A989}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Framework", "BenchmarkSuite\BenchmarkSuite.Framework.csproj", "{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.Framework", "src\BenchmarkSuite\BenchmarkSuite.Framework.csproj", "{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.ConsoleRunner", "BenchmarkSuite.Runner\BenchmarkSuite.ConsoleRunner.csproj", "{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkSuite.ConsoleRunner", "src\BenchmarkSuite.ConsoleRunner\BenchmarkSuite.ConsoleRunner.csproj", "{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6B2DBC74-2A6F-4D91-8BE3-64366C6ADAEC}"
 EndProject
