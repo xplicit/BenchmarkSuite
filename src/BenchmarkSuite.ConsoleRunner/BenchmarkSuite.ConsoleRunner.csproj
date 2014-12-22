@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F2E13FB5-A6B4-4CA2-A478-964EC2C12C00}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BenchmarkSuite.Runner</RootNamespace>
-    <AssemblyName>BenchmarkSuite.Runner</AssemblyName>
+    <RootNamespace>BenchmarkSuite.ConsoleRunner</RootNamespace>
+    <AssemblyName>bench-console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,10 +46,6 @@
     <ProjectReference Include="..\BenchmarkSuite\BenchmarkSuite.Framework.csproj">
       <Project>{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}</Project>
       <Name>BenchmarkSuite.Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\tests\BenchmarkSuite.Tests\BenchmarkSuite.Tests.csproj">
-      <Project>{1E751CC8-4308-4F7D-9F4A-1F5AC4E9CD4C}</Project>
-      <Name>BenchmarkSuite.Tests</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
