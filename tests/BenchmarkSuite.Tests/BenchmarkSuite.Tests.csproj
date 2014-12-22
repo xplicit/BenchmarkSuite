@@ -37,7 +37,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\BenchmarkSuite\BenchmarkSuite.Framework.csproj">
+    <ProjectReference Include="..\..\src\BenchmarkSuite\BenchmarkSuite.Framework.csproj">
       <Project>{F0FA6DE5-5E4A-4EF6-93EF-157A712EA1A6}</Project>
       <Name>BenchmarkSuite.Framework</Name>
     </ProjectReference>
