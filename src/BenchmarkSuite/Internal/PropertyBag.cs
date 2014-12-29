@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using BenchmarkSuite.Framework.Interfaces;
+using System.Xml;
+using BenchmarkSuite.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {
@@ -117,9 +119,7 @@ namespace BenchmarkSuite.Framework.Internal
 		/// <returns>An XmlNode representing the PropertyBag</returns>
 		public XmlNode ToXml(bool recursive)
 		{
-			XmlNode topNode = XmlNode.CreateTopLevelElement("dummy");
-
-			XmlNode thisNode = AddToXml(topNode, recursive);
+            XmlNode thisNode = AddToXml(new XmlDocument().DocumentElement, recursive);
 
 			return thisNode;
 		}

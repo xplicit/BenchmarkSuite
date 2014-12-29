@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
 using BenchmarkSuite.Framework.Interfaces;
+using System.Xml;
+using BenchmarkSuite.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {
@@ -134,9 +136,9 @@ namespace BenchmarkSuite.Framework.Internal
                 foreach(Benchmark b in Benchmarks)
                 {
                     XmlNode bNode = bmNode.AddElement("benchmark");
-                    bNode.Attributes.Add("name", b.Name);
-                    bNode.Attributes.Add("elapsed-ms", b.ElapsedMilleseconds.ToString());
-                    bNode.Attributes.Add("elapsed-ticks", b.ElapsedTicks.ToString());
+                    bNode.AddAttribute("name", b.Name);
+                    bNode.AddAttribute("elapsed-ms", b.ElapsedMilleseconds.ToString());
+                    bNode.AddAttribute("elapsed-ticks", b.ElapsedTicks.ToString());
                 }
             }
 

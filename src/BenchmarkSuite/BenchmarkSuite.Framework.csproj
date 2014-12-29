@@ -42,7 +42,6 @@
     <Compile Include="Tests\Test.cs" />
     <Compile Include="Interfaces\ITest.cs" />
     <Compile Include="Interfaces\IXmlNodeBuilder.cs" />
-    <Compile Include="Interfaces\XmlNode.cs" />
     <Compile Include="Common\Guard.cs" />
     <Compile Include="Interfaces\IPropertyBag.cs" />
     <Compile Include="Interfaces\RunState.cs" />
@@ -195,6 +194,8 @@
     <Compile Include="SequentialStrategy.cs" />
     <Compile Include="Tests\Benchmark.cs" />
     <Compile Include="Tests\BenchmarkResult.cs" />
+    <Compile Include="Common\XmlHelper.cs" />
+    <Compile Include="Common\ResultHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

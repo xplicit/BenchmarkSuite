@@ -7,10 +7,10 @@ using BenchmarkSuite.Framework.Internal;
 using System.IO;
 using System.Text;
 using System.Xml;
-using XmlNode = BenchmarkSuite.Framework.Interfaces.XmlNode;
 using BenchmarkSuite.Framework;
 using Mono.Options;
 using System.Reflection;
+using BenchmarkSuite.Common;
 
 namespace BenchmarkSuite.ConsoleRunner
 {
@@ -118,14 +118,23 @@ namespace BenchmarkSuite.ConsoleRunner
 
             TestFilter filter = CreateTestFilter(options);
 
-			DefaultTestAssemblyBuilder builder = new DefaultTestAssemblyBuilder ();
-			NUnitTestAssemblyRunner runner = new NUnitTestAssemblyRunner (builder);
+            List<XmlNode> nodes = new List<XmlNode>();
 
-            ITest test = runner.Load (options.InputFiles[0], settings);
+            foreach (string assembly in options.InputFiles)
+            {
+                DefaultTestAssemblyBuilder builder = new DefaultTestAssemblyBuilder ();
+                NUnitTestAssemblyRunner runner = new NUnitTestAssemblyRunner (builder);
 
-            ITestResult result = runner.Run (TestListener.NULL, filter);
+                ITest test = runner.Load(assembly, settings);
+                ITestResult result = runner.Run(TestListener.NULL, filter);
+                nodes.Add(result.ToXml(true));
+            }
 
-            XmlNode resultNode = result.ToXml(true);
+            XmlNode resultNode = ResultHelper.Aggregate("bench-suite","","",nodes);
+
+//            TestEngineResult result = _realRunner.Run(listener, filter).Aggregate("test-run", TestPackage.Name, TestPackage.FullName);
+
+            resultNode.InsertEnvironmentElement();
 
 //			ITest test = builder.Build ("BenchmarkSuite.Tests.dll", settings);
 

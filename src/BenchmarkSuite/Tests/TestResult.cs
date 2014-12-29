@@ -29,6 +29,8 @@ using BenchmarkSuite.Framework.Interfaces;
 using BenchmarkSuite;
 using System.Collections.Generic;
 using BenchmarkSuite.Framework.Common;
+using System.Xml;
+using BenchmarkSuite.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {
@@ -237,9 +239,9 @@ namespace BenchmarkSuite.Framework.Internal
 		/// <returns>An XmlNode representing the result</returns>
 		public XmlNode ToXml(bool recursive)
 		{
-			XmlNode topNode = XmlNode.CreateTopLevelElement("dummy");
+            XmlNode topNode = XmlHelper.CreateTopLevelElement("dummy");
 
-			AddToXml(topNode, recursive);
+            AddToXml(topNode, recursive);
 
 			return topNode.FirstChild;
 		}
@@ -511,7 +513,7 @@ namespace BenchmarkSuite.Framework.Internal
 		private XmlNode AddReasonElement(XmlNode targetNode)
 		{
 			XmlNode reasonNode = targetNode.AddElement("reason");
-			reasonNode.AddElement("message").TextContent = this.EscapedMessage;
+            reasonNode.AddElement("message").InnerText = this.EscapedMessage;
 			return reasonNode;
 		}
 
@@ -526,12 +528,12 @@ namespace BenchmarkSuite.Framework.Internal
 
 			if (this.Message != null)
 			{
-				failureNode.AddElement("message").TextContent = this.EscapedMessage;
+                failureNode.AddElement("message").InnerText = this.EscapedMessage;
 			}
 
 			if (this.StackTrace != null)
 			{
-				failureNode.AddElement("stack-trace").TextContent = this.StackTrace;
+                failureNode.AddElement("stack-trace").InnerText = this.StackTrace;
 			}
 
 			return failureNode;
@@ -540,7 +542,7 @@ namespace BenchmarkSuite.Framework.Internal
 		private XmlNode AddOutputElement(XmlNode targetNode)
 		{
 			XmlNode outputNode = targetNode.AddElement("output");
-			outputNode.TextContent = this.Output;
+			outputNode.Value = this.Output;
 
 			return outputNode;
 		}

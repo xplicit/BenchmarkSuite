@@ -24,6 +24,8 @@
 using System;
 using System.Reflection;
 using BenchmarkSuite.Framework.Interfaces;
+using System.Xml;
+using BenchmarkSuite.Common;
 
 namespace BenchmarkSuite.Framework.Internal
 {
@@ -306,9 +308,8 @@ namespace BenchmarkSuite.Framework.Internal
 		/// <returns></returns>
 		public XmlNode ToXml(bool recursive)
 		{
-			XmlNode topNode = XmlNode.CreateTopLevelElement("dummy");
 
-			XmlNode thisNode = AddToXml(topNode, recursive);
+            XmlNode thisNode = AddToXml(new XmlDocument().DocumentElement, recursive);
 
 			return thisNode;
 		}
