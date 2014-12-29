@@ -116,13 +116,14 @@ namespace BenchmarkSuite.ConsoleRunner
             if (options.Verbose)
                 settings["Verbose"] = true;
 
+            TestFilter filter = CreateTestFilter(options);
 
 			DefaultTestAssemblyBuilder builder = new DefaultTestAssemblyBuilder ();
 			NUnitTestAssemblyRunner runner = new NUnitTestAssemblyRunner (builder);
 
             ITest test = runner.Load (options.InputFiles[0], settings);
 
-            ITestResult result = runner.Run (TestListener.NULL, TestFilter.Empty);
+            ITestResult result = runner.Run (TestListener.NULL, filter);
 
             XmlNode resultNode = result.ToXml(true);
 
@@ -141,6 +142,24 @@ namespace BenchmarkSuite.ConsoleRunner
 
             return 0;
 		}
+
+        public static TestFilter CreateTestFilter(ConsoleOptions options)
+        {
+            TestFilterBuilder builder = new TestFilterBuilder();
+            foreach (string testName in options.TestList)
+                builder.Tests.Add(testName);
+
+            // TODO: Support multiple include / exclude options
+
+            if (options.Include != null)
+                builder.Include.Add(options.Include);
+
+            if (options.Exclude != null)
+                builder.Exclude.Add(options.Exclude);
+
+            return builder.GetFilter();
+        }
+
 
         private static void WriteHeader()
         {

@@ -41,7 +41,6 @@ Global
 		{1E751CC8-4308-4F7D-9F4A-1F5AC4E9CD4C} = {6B2DBC74-2A6F-4D91-8BE3-64366C6ADAEC}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = BenchmarkSuite.Runner\BenchmarkSuite.ConsoleRunner.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
 		$1.inheritsSet = VisualStudio
