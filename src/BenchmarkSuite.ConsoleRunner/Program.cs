@@ -254,7 +254,7 @@ namespace BenchmarkSuite.ConsoleRunner
         {
             foreach (BenchmarkResult br in result.BenchmarkResults)
             {
-                Console.WriteLine("Name={0}, Mean={1}, Min={2}, Max={3}, StdDev={4}, StdDev%={5}", br.Name, br.Mean, br.Min, br.Max, br.StdDev, br.StdDevPercents);
+                Console.WriteLine("Name={0}, Mean={1}, Min={2}, Max={3}, StdDev={4}, StdErr%={5}", br.Name, br.Mean, br.Min, br.Max, br.StdDev, br.StdErrPercents);
                 foreach (Benchmark b in br.Benchmarks)
                 {
                     Console.WriteLine("Name={0}, Elapsed={1}", b.Name, b.ElapsedTicks);

@@ -45,9 +45,9 @@ namespace BenchmarkSuite.Framework.Internal
         public double StdDev {get; private set; }
 
         /// <summary>
-        /// Relation of Standard Deviation to Mean in percents
+        /// Relation of Standard Error to Mean in percents
         /// </summary>
-        public double StdDevPercents { get { return (StdDev / Mean) * 100.0; } }
+        public double StdErrPercents { get { return (StdDev / (Mean * Math.Sqrt((double)Count))) * 100.0; } }
 
         /// <summary>
         /// List of benchmarking raw data
@@ -127,7 +127,7 @@ namespace BenchmarkSuite.Framework.Internal
             thisNode.AddAttribute("max", this.Max.ToString());
             thisNode.AddAttribute("mean", this.Mean.ToString());
             thisNode.AddAttribute("stddev", this.StdDev.ToString());
-            thisNode.AddAttribute("stddev-percent", this.StdDevPercents.ToString());
+            thisNode.AddAttribute("stderr-percent", this.StdErrPercents.ToString());
 
             if (this.Benchmarks != null)
             {
