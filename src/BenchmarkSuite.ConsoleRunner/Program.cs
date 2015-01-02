@@ -126,17 +126,13 @@ namespace BenchmarkSuite.ConsoleRunner
                 NUnitTestAssemblyRunner runner = new NUnitTestAssemblyRunner (builder);
 
                 ITest test = runner.Load(assembly, settings);
-                ITestResult result = runner.Run(TestListener.NULL, filter);
+                ITestResult result = runner.Run(new ConsoleTestListener(), filter);
                 nodes.Add(result.ToXml(true));
             }
 
             XmlNode resultNode = ResultHelper.Aggregate("bench-suite","","",nodes);
 
-//            TestEngineResult result = _realRunner.Run(listener, filter).Aggregate("test-run", TestPackage.Name, TestPackage.FullName);
-
             resultNode.InsertEnvironmentElement();
-
-//			ITest test = builder.Build ("BenchmarkSuite.Tests.dll", settings);
 
             string outputPath = "BenchmarkResult.xml";
 

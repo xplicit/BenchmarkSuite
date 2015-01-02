@@ -53,6 +53,16 @@ namespace BenchmarkSuite.Framework.Internal.Commands
 		[ThreadStatic] static IList<Benchmark> benchmarks;
 
         #region Public Methods
+        /// <summary>
+        /// List of benchmarks
+        /// </summary>
+        /// <value>The benchmarks.</value>
+        /// <remarks>We have to use static/ThreadStatic because this Property 
+        /// must be accessed from Benchmark class, which does not have a reference
+        /// to TestCommand. If the way of passing reference to TestCommand indirectly 
+        /// be found? we will be able to remove static/ThreadStatic modifier and use
+        /// properties in a common way via object. 
+        ///  </remarks>
 		public static IList<Benchmark> Benchmarks
 		{ 
 			get { 

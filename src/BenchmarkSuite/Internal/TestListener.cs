@@ -45,6 +45,22 @@ namespace BenchmarkSuite.Framework.Internal
         public void TestFinished(ITestResult result){}
 
         /// <summary>
+        /// Called when a new benchmarking iteration started
+        /// </summary>
+        /// <param name="test">The test that has finished</param>
+        /// <param name="iter">Current iteration number</param>
+        /// <param name="iterCount">Total number of iterations</param>
+        public void BenchmarkIterationStarted(ITest test, int iter, int iterCount){}
+
+        /// <summary>
+        /// Called when a new benchmarking iteration finished
+        /// </summary>
+        /// <param name="test">The test that is starting</param>
+        /// <param name="iter">Current iteration number</param>
+        /// <param name="iterCount">Total number of iterations</param>
+        public void BenchmarkIterationFinished(ITest test, int iter, int iterCount){}
+
+        /// <summary>
         /// Construct a new TestListener - private so it may not be used.
         /// </summary>
         private TestListener() { }

@@ -18,7 +18,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
-    <Commandlineparameters>--test=BenchmarkSuite.Tests.MyClass.Bench1 ../../../../tests/BenchmarkSuite.Tests/bin/Debug/BenchmarkSuite.Tests.dll</Commandlineparameters>
+    <Commandlineparameters>--test=BenchmarkSuite.Tests.MyClass.Bench1 ../../../../tests/BenchmarkSuite.Tests/bin/Debug/BenchmarkSuite.Tests.dll ../../../../tests/BenchmarkSuite.Tests/bin/Debug/BenchmarkSuite.Tests.dll</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -42,6 +42,7 @@
     <Compile Include="TestNameParser.cs" />
     <Compile Include="PackageSettings.cs" />
     <Compile Include="TestFilterBuilder.cs" />
+    <Compile Include="ConsoleTestListener.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

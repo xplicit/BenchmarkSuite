@@ -60,9 +60,15 @@ namespace BenchmarkSuite.Framework.Internal.Commands
         {
             var thisThread = System.Threading.Thread.CurrentThread.ManagedThreadId;
             // TODO: Decide if we should handle exceptions here
-            for (int i = 0; i < 6; i++)
+            Benchmarks.Clear();
+
+            int benchCount = 6;
+
+            for (int i = 0; i < benchCount; i++)
             {
+                context.Listener.BenchmarkIterationStarted(context.CurrentTest,i,benchCount);
                 object result = RunTestMethod(context);
+                context.Listener.BenchmarkIterationFinished(context.CurrentTest,i,benchCount);
             }
 			//TODO: write bench
 //            if (testMethod.HasExpectedResult)
@@ -71,7 +77,6 @@ namespace BenchmarkSuite.Framework.Internal.Commands
             context.CurrentResult.SetResult(ResultState.Success);
 
             var results = BenchmarkResult.CalculateResults(Benchmarks);
-            Benchmarks.Clear ();
 
             foreach (BenchmarkResult br in results)
             {

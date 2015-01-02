@@ -42,5 +42,21 @@ namespace BenchmarkSuite.Framework.Interfaces
         /// </summary>
         /// <param name="result">The result of the test</param>
         void TestFinished(ITestResult result);
+
+        /// <summary>
+        /// Called when a new benchmarking iteration started
+        /// </summary>
+        /// <param name="test">The test that has finished</param>
+        /// <param name="iter">Current iteration number</param>
+        /// <param name="iterCount">Total number of iterations</param>
+        void BenchmarkIterationStarted(ITest test, int iter, int iterCount);
+
+        /// <summary>
+        /// Called when a new benchmarking iteration finished
+        /// </summary>
+        /// <param name="test">The test that is starting</param>
+        /// <param name="iter">Current iteration number</param>
+        /// <param name="iterCount">Total number of iterations</param>
+        void BenchmarkIterationFinished(ITest test, int iter, int iterCount);
     }
 }
