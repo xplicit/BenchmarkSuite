@@ -134,19 +134,32 @@ namespace BenchmarkSuite.ConsoleRunner
 
             resultNode.InsertEnvironmentElement();
 
-            string outputPath = "BenchmarkResult.xml";
+            if (options.ResultOutputSpecifications != null && options.ResultOutputSpecifications.Count > 0)
+            {
+                foreach (var spec in options.ResultOutputSpecifications)
+                {
+                    WriteXmlResult(resultNode, spec.OutputPath);
+                }
+            }
+            else
+            {
+                WriteXmlResult(resultNode, "BenchmarkResult.xml");
+            }
 
+            return 0;
+		}
+
+        public static void WriteXmlResult(XmlNode resultNode, string outputPath)
+        {
             using (StreamWriter writer = new StreamWriter(outputPath, false, Encoding.UTF8))
             {
-                using (XmlWriter xmlWriter = XmlWriter.Create(writer, new XmlWriterSettings(){Indent=true}))
+                using (XmlWriter xmlWriter = XmlWriter.Create(writer, new XmlWriterSettings(){ Indent = true }))
                 {
                     xmlWriter.WriteStartDocument(false);
                     resultNode.WriteTo(xmlWriter);
                 }
             }
-
-            return 0;
-		}
+        }
 
         public static TestFilter CreateTestFilter(ConsoleOptions options)
         {
