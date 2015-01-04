@@ -136,6 +136,11 @@ namespace BenchmarkSuite.ConsoleRunner
         /// </summary>
         public const string WorkDirectory = "WorkDirectory";
 
+        /// <summary>
+        /// Number of benchmark measurements
+        /// </summary>
+        public const string BenchCount = "BenchCount";
+
         #endregion
     }
 }

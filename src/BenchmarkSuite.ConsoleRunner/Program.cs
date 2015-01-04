@@ -113,6 +113,9 @@ namespace BenchmarkSuite.ConsoleRunner
             if (options.RandomSeed > 0)
                 settings[PackageSettings.RandomSeed] = options.RandomSeed;
 
+            if (options.BenchCount > 0)
+                settings[PackageSettings.BenchCount] = options.BenchCount;
+
             if (options.Verbose)
                 settings["Verbose"] = true;
 

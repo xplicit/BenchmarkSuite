@@ -95,6 +95,9 @@ namespace BenchmarkSuite.ConsoleRunner.Options
 			this.Add("seed=", "Set the random {SEED} used to generate test cases.",
 				v => randomSeed = RequiredInt(v, "--seed"));
 
+            this.Add("benchcount=", "Set the number of benchmark measurements for each test case.",
+                v => benchCount = RequiredInt(v, "--benchcount"));
+
 			this.Add("workers=", "Specify the {NUMBER} of worker threads to be used in running tests.",
 				v => numWorkers = RequiredInt(v, "--workers"));
 
@@ -209,7 +212,10 @@ namespace BenchmarkSuite.ConsoleRunner.Options
 		private int numWorkers = -1;
 		public int NumWorkers { get { return numWorkers; } }
 
-		public bool StopOnError { get; private set; }
+        private int benchCount = -1;
+        public int BenchCount { get { return benchCount; } }
+
+        public bool StopOnError { get; private set; }
 
 		public bool WaitBeforeExit { get; private set; }
 

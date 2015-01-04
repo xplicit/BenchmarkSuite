@@ -137,6 +137,10 @@ namespace BenchmarkSuite.Framework.Api
 				IList fixtures = GetFixtures(assembly, fixtureNames);
 
 				testAssembly = BuildTestAssembly(assembly, assemblyPath, fixtures);
+                if (options.Contains(PropertyNames.BenchCount))
+                {
+                    testAssembly.Properties.Set(PropertyNames.BenchCount,options[PropertyNames.BenchCount]);
+                }
 			}
 			catch (Exception ex)
 			{

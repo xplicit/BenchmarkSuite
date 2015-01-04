@@ -133,6 +133,11 @@ namespace BenchmarkSuite.Framework.Internal
 		/// </summary>
 		public const string IgnoreUntilDate = "IgnoreUntilDate";
 
+        /// <summary>
+        /// Number of benchmarks measurements
+        /// </summary>
+        public const string BenchCount = "BenchCount";
+
 		#endregion
 	}
 }

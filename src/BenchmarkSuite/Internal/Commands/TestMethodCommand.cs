@@ -62,7 +62,19 @@ namespace BenchmarkSuite.Framework.Internal.Commands
             // TODO: Decide if we should handle exceptions here
             Benchmarks.Clear();
 
-            int benchCount = 6;
+            // we skip the first iteration, so add +1 to number of benchmarks
+            int benchCount = 5 + 1;
+
+            ITest curTest = testMethod;
+
+            //search first parent, where BenchCount is set
+            while (curTest.Properties.Get(PropertyNames.BenchCount) == null && curTest.Parent != null)
+                curTest = curTest.Parent;
+
+            if (curTest.Properties.Get(PropertyNames.BenchCount) != null)
+            {
+                benchCount = (int)curTest.Properties.Get(PropertyNames.BenchCount) + 1;
+            }
 
             for (int i = 0; i < benchCount; i++)
             {
