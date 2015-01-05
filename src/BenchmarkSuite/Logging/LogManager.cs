@@ -7,6 +7,7 @@
 // limitations under the License.
 //
 using BenchmarkSuite.Framework.Interfaces;
+using BenchmarkSuite.Logging;
 
 
 #endregion
@@ -49,7 +50,7 @@ namespace BenchmarkSuite.Framework.Logging
 	public sealed class LogManager
 	{
         #region Private Static Fields
-        private static ILogFactory logFactory; //=new EmptyLogger(); 
+        private static ILogFactory logFactory = new EmptyLogFactory(); 
 
         #endregion Private Static Fields
 
