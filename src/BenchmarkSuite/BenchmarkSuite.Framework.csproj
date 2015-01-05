@@ -30,9 +30,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
-    <Reference Include="log4net">
-      <HintPath>..\..\libs\log4net.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +193,11 @@
     <Compile Include="Tests\BenchmarkResult.cs" />
     <Compile Include="Common\XmlHelper.cs" />
     <Compile Include="Common\ResultHelper.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
+    <Compile Include="Interfaces\ILogFactory.cs" />
+    <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Logging\EmptyLogger.cs" />
+    <Compile Include="Logging\EmptyLogFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -209,6 +211,7 @@
     <Folder Include="Internal\Execution\" />
     <Folder Include="Internal\Commands\" />
     <Folder Include="Internal\Filters\" />
+    <Folder Include="Logging\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Attributes\AttributeHierarchy.txt" />

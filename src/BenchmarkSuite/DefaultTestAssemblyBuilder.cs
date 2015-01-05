@@ -29,7 +29,7 @@ using BenchmarkSuite.Framework.Interfaces;
 using BenchmarkSuite.Framework.Internal;
 using BenchmarkSuite.Framework.Internal.Builders;
 using BenchmarkSuite.Framework.Common;
-using log4net;
+using BenchmarkSuite.Framework.Logging;
 
 namespace BenchmarkSuite.Framework.Api
 {

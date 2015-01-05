@@ -2,9 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{21CC09ED-BB53-479C-B9F8-D038A0371776}"
-	ProjectSection(SolutionItems) = preProject
-		libs\log4net.dll = libs\log4net.dll
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{47872A22-9950-4ED7-912E-DBE8E250A989}"
 EndProject

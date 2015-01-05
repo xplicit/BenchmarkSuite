@@ -29,8 +29,8 @@ using System.Threading;
 using BenchmarkSuite.Framework.Interfaces;
 using BenchmarkSuite.Framework.Internal;
 using BenchmarkSuite.Framework.Internal.Execution;
-using log4net;
 using BenchmarkSuite.Framework.Common;
+using BenchmarkSuite.Framework.Logging;
 
 namespace BenchmarkSuite.Framework.Api
 {

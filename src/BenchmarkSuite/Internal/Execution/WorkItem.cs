@@ -25,9 +25,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using BenchmarkSuite.Framework.Interfaces;
-using log4net;
 using BenchmarkSuite.Framework.Common;
 using System.Diagnostics;
+using BenchmarkSuite.Framework.Logging;
 
 namespace BenchmarkSuite.Framework.Internal.Execution
 {
