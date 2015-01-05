@@ -8,6 +8,7 @@
     <RootNamespace>BenchmarkSuite.ConsoleRunner</RootNamespace>
     <AssemblyName>bench-console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -18,7 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
-    <Commandlineparameters>--test=BenchmarkSuite.Tests.MyClass.Bench1 ../../../../tests/BenchmarkSuite.Tests/bin/Debug/BenchmarkSuite.Tests.dll ../../../../tests/BenchmarkSuite.Tests/bin/Debug/BenchmarkSuite.Tests.dll</Commandlineparameters>
+    <Commandlineparameters>--benchcount=10 --test=BenchmarkSuite.Tests.MyClass.Bench1 ../../../../tests/BenchmarkSuite.Tests/bin/Debug/BenchmarkSuite.Tests.dll ../../../../tests/BenchmarkSuite.Tests/bin/Debug/BenchmarkSuite.Tests.dll</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -27,7 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
-    <Commandlineparameters>../../../../tests/BenchmarkSuite.Tests/bin/Release/BenchmarkSuite.Tests.dll</Commandlineparameters>
+    <Commandlineparameters>--result=test1.xml  ../../../../tests/BenchmarkSuite.Tests/bin/Release/BenchmarkSuite.Tests.dll</Commandlineparameters>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
