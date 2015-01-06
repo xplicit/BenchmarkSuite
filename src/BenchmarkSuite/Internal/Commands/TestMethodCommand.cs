@@ -62,6 +62,14 @@ namespace BenchmarkSuite.Framework.Internal.Commands
             // TODO: Decide if we should handle exceptions here
             Benchmarks.Clear();
 
+            //number of iterations inside  the benchmark
+            int iter = -1;
+            if (testMethod.Properties.ContainsKey(PropertyNames.Iterations))
+            {
+                iter = (int)testMethod.Properties.Get(PropertyNames.Iterations);
+            }
+            Benchmark.Iter = iter;
+
             // we skip the first iteration, so add +1 to number of benchmarks
             int benchCount = 5 + 1;
 

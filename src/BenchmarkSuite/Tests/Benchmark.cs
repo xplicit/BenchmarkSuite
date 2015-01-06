@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using BenchmarkSuite.Framework.Internal.Commands;
+using System.Runtime.CompilerServices;
 
 namespace BenchmarkSuite.Framework
 {
@@ -9,13 +10,22 @@ namespace BenchmarkSuite.Framework
 		Stopwatch sw = new Stopwatch();
 		long elapsed;
 
+        [ThreadStatic]static int iter;
+
+        public static int Iter
+        { 
+            get { return iter; }
+            set { iter = value; }
+        }
+
 		public string Name { get; set; }
 
 		public long ElapsedTicks { get { return elapsed; } }
 
         public long ElapsedMilleseconds { get { return elapsed * 1000 / Stopwatch.Frequency; } }
 
-		public Benchmark ()
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public Benchmark ()
 		{
 			Name = new StackFrame (1, true).GetMethod ().Name;
 			TestCommand.Benchmarks.Add (this);
@@ -27,6 +37,7 @@ namespace BenchmarkSuite.Framework
 			TestCommand.Benchmarks.Add (this);
 		}
 
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public static Benchmark StartNew()
         {
             string name = new StackFrame (1, true).GetMethod ().Name;

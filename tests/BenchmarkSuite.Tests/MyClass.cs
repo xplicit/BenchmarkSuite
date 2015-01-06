@@ -30,9 +30,10 @@ namespace BenchmarkSuite.Tests
 		}
 
 		[Bench]
+        [Iterations(100000)]
 		public void Bench2()
 		{
-			Console.WriteLine ("Bench2");
+            Console.WriteLine ("Bench2 {0}",Benchmark.Iter);
 			Benchmark b = new Benchmark (); 
 
 			int x = 0;

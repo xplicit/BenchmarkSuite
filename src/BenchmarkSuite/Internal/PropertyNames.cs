@@ -138,6 +138,11 @@ namespace BenchmarkSuite.Framework.Internal
         /// </summary>
         public const string BenchCount = "BenchCount";
 
+        /// <summary>
+        /// Number of iterations of inside the bench 
+        /// </summary>
+        public const string Iterations = "Iterations";
+
 		#endregion
 	}
 }

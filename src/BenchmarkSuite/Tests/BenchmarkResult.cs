@@ -25,6 +25,17 @@ namespace BenchmarkSuite.Framework.Internal
         public int Count { get; private set; }
 
         /// <summary>
+        /// Number of iterations in one measure
+        /// </summary>
+        public int Iterations { get; private set; }
+
+        /// <summary>
+        /// Gets the ops per second.
+        /// </summary>
+        /// <value>The ops per second.</value>
+        public double OpsPerSecond { get { return (Iterations > 0) ? 1000.0 * ((double)Iterations) / Mean : double.NaN; } } 
+
+        /// <summary>
         /// Mean value of benchmarks in ms
         /// </summary>
         public double Mean { get ; private set; }
@@ -62,7 +73,7 @@ namespace BenchmarkSuite.Framework.Internal
 
             foreach (var gr in groups)
             {
-                BenchmarkResult br = new BenchmarkResult() { Name = gr.Key, Count = gr.Count() - 1, Benchmarks = new List<Benchmark>() };
+                BenchmarkResult br = new BenchmarkResult() { Iterations = -1, Name = gr.Key, Count = gr.Count() - 1, Benchmarks = new List<Benchmark>() };
                 results.Add(br);
                 bool isFirst = true;
 
@@ -73,6 +84,11 @@ namespace BenchmarkSuite.Framework.Internal
                     //can influence on the results
                     if (isFirst)
                     {
+                        //TODO: we are using static property 'Iter'.  
+                        //Not so good, because not obvious behaviour. 
+                        //Currently we're assuming, that the CalculateResults 
+                        //is called after benchmarking
+                        br.Iterations = Benchmark.Iter;
                         br.Min = double.MaxValue;
                         br.Max = double.MinValue;
                         isFirst = false;
@@ -126,6 +142,7 @@ namespace BenchmarkSuite.Framework.Internal
             thisNode.AddAttribute("min", this.Min.ToString());
             thisNode.AddAttribute("max", this.Max.ToString());
             thisNode.AddAttribute("mean", this.Mean.ToString());
+            thisNode.AddAttribute("ops-per-sec", this.OpsPerSecond.ToString());
             thisNode.AddAttribute("stddev", this.StdDev.ToString());
             thisNode.AddAttribute("stderr-percent", this.StdErrPercents.ToString());
 

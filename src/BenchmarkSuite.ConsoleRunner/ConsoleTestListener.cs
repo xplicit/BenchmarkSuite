@@ -13,7 +13,7 @@ namespace BenchmarkSuite.ConsoleRunner
 
         public void TestStarted(ITest test)
         {
-            if (test is TestMethod)
+            if (test is TestMethod) 
             {
                 Console.Write("{0,"+curIndent+"}{1} => ", String.Empty, test.Name);
             }
@@ -36,7 +36,10 @@ namespace BenchmarkSuite.ConsoleRunner
                     if (result.BenchmarkResults.Count > 0)
                     {
                         var b = result.BenchmarkResults[0];
-                        Console.WriteLine(" Mean={0:F2}, Min={1:F2}, Max={2:F2}, StdDev={3:F2}, StdErr={4:F2}%", b.Mean, b.Min, b.Max, b.StdDev, b.StdErrPercents);
+                        string format = " Mean={0:F2}, Min={1:F2}, Max={2:F2}, StdDev={3:F2}, StdErr={4:F2}%";
+                        if (!double.IsNaN(b.OpsPerSecond))
+                            format += ", Ops={5:F2}";
+                        Console.WriteLine(format, b.Mean, b.Min, b.Max, b.StdDev, b.StdErrPercents, b.OpsPerSecond);
                     }
                     else
                     {
