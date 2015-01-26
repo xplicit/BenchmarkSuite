@@ -24,6 +24,7 @@
 using System;
 using System.Collections.Generic;
 using BenchmarkSuite.Framework.Interfaces;
+using System.Text.RegularExpressions;
 
 namespace BenchmarkSuite.Framework.Internal.Filters
 {
@@ -55,7 +56,9 @@ namespace BenchmarkSuite.Framework.Internal.Filters
         /// </summary>
         protected override bool Match(ITest test, string value)
         {
-            return test.FullName == value;
+            string pattern = Regex.Escape(value).Replace(@"\*", ".*").Replace(@"\?", ".");
+
+            return Regex.IsMatch(test.FullName, pattern);
         }
     }
 }
