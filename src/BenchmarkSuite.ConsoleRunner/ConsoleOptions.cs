@@ -60,48 +60,48 @@ namespace BenchmarkSuite.ConsoleRunner.Options
 			//   workers
 
 			// Select Tests
-			this.Add("test=", "Comma-separated list of {NAMES} of tests to run or explore. This option may be repeated.",
-				v => ((List<string>)TestList).AddRange(TestNameParser.Parse(RequiredValue(v, "--test"))));
+            this.Add("bench=", "Comma-separated list of {NAMES} of benchmarks to run or explore. Wildcards * and ? may be used in {NAMES}. This option may be repeated.",
+				v => ((List<string>)TestList).AddRange(TestNameParser.Parse(RequiredValue(v, "--bench"))));
 
-			this.Add("include=", "Test {CATEGORIES} to be included. May be a single category, a comma-separated list of categories or a category expression.",
+			this.Add("include=", "Benchmark {CATEGORIES} to be included. May be a single category, a comma-separated list of categories or a category expression.",
 				v => Include = RequiredValue(v, "--include"));
 
-			this.Add("exclude=", "Test {CATEGORIES} to be excluded. May be a single category, a comma-separated list of categories or a category expression.",
+            this.Add("exclude=", "Benchmark {CATEGORIES} to be excluded. May be a single category, a comma-separated list of categories or a category expression.",
 				v => Exclude = RequiredValue(v, "--exclude"));
 
 			this.Add("config=", "{NAME} of a project configuration to load (e.g.: Debug).", 
 				v => ActiveConfig = RequiredValue(v, "--config"));
 
 			// Where to Run Tests
-			this.Add("process=", "{PROCESS} isolation for test assemblies.\nValues: Single, Separate, Multiple",
+            this.Add("process=", "{PROCESS} isolation for benchmark assemblies.\nValues: Single, Separate, Multiple",
 				v => ProcessModel = RequiredValue(v, "--process", "Single", "Separate", "Multiple"));
 
-			this.Add("domain=", "{DOMAIN} isolation for test assemblies.\nValues: None, Single, Multiple",
+            this.Add("domain=", "{DOMAIN} isolation for benchmark assemblies.\nValues: None, Single, Multiple",
 				v => DomainUsage = RequiredValue(v, "--domain", "None", "Single", "Multiple"));
 
 			// How to Run Tests
-			this.Add("framework=", "{FRAMEWORK} type/version to use for tests.\nExamples: mono, net-3.5, v4.0, 2.0, mono-4.0",
+			this.Add("framework=", "{FRAMEWORK} type/version to use for benchmarks.\nExamples: mono, net-3.5, v4.0, 2.0, mono-4.0",
 				v => Framework = RequiredValue(v, "--framework"));
 
-			this.Add("x86", "Run tests in an x86 process on 64 bit systems",
+			this.Add("x86", "Run benchmarks in an x86 process on 64 bit systems",
 				v => RunAsX86 = v != null);
 
-			this.Add("dispose-runners", "Dispose each test runner after it has finished running its tests.",
+			this.Add("dispose-runners", "Dispose each benchmark runner after it has finished running its benchmarks.",
 				v => DisposeRunners = v != null);
 
-			this.Add("timeout=", "Set timeout for each test case in {MILLISECONDS}.",
+			this.Add("timeout=", "Set timeout for each benchmark in {MILLISECONDS}.",
 				v => defaultTimeout = RequiredInt(v, "--timeout"));
 
-			this.Add("seed=", "Set the random {SEED} used to generate test cases.",
+			this.Add("seed=", "Set the random {SEED} used to generate benchmarks.",
 				v => randomSeed = RequiredInt(v, "--seed"));
 
             this.Add("benchcount=", "Set the number of benchmark measurements for each test case.",
                 v => benchCount = RequiredInt(v, "--benchcount"));
 
-			this.Add("workers=", "Specify the {NUMBER} of worker threads to be used in running tests.",
+			this.Add("workers=", "Specify the {NUMBER} of worker threads to be used in running benchmarks.",
 				v => numWorkers = RequiredInt(v, "--workers"));
 
-			this.Add("stoponerror", "Stop run immediately upon any test failure or error.",
+			this.Add("stoponerror", "Stop run immediately upon any benchmark failure or error.",
 				v => StopOnError = v != null);
 
 			this.Add("wait", "Wait for input before closing console window.",
@@ -114,26 +114,26 @@ namespace BenchmarkSuite.ConsoleRunner.Options
 			this.Add("work=", "{PATH} of the directory to use for output files.",
 				v => WorkDirectory = RequiredValue(v, "--work"));
 
-			this.Add("output|out=", "File {PATH} to contain text output from the tests.",
+			this.Add("output|out=", "File {PATH} to contain text output from the benchmarks.",
 				v => OutFile = RequiredValue(v, "--output"));
 
-			this.Add("err=", "File {PATH} to contain error output from the tests.",
+			this.Add("err=", "File {PATH} to contain error output from the benchmarks.",
 				v => ErrFile = RequiredValue(v, "--err"));
 
-			this.Add("result=", "An output {SPEC} for saving the test results.\nThis option may be repeated.", 
+			this.Add("result=", "An output {SPEC} for saving the benchmark results.\nThis option may be repeated.", 
 				v => resultOutputSpecifications.Add(new OutputSpecification(RequiredValue(v, "--resultxml"))));
 
-			this.Add("explore:", "Display or save test info rather than running tests. Optionally provide an output {SPEC} for saving the test info. This option may be repeated.", v => 
+			this.Add("explore:", "Display or save benchmark info rather than running benchmarks. Optionally provide an output {SPEC} for saving the benchmark info. This option may be repeated.", v => 
 				{
 					Explore = true;
 					if (v != null)
 						ExploreOutputSpecifications.Add(new OutputSpecification(v));
 				});
 
-			this.Add("noresult", "Don't save any test results.", 
+			this.Add("noresult", "Don't save any benchmark results.", 
 				v => noresult = v != null);
 
-			this.Add("labels=", "Specify whether to write test case names to the output. Values: Off, On, All", 
+			this.Add("labels=", "Specify whether to write benchmark names to the output. Values: Off, On, All", 
 				v => DisplayTestLabels = RequiredValue(v, "--labels", "Off", "On", "All"));
 
 			this.Add("trace=", "Set internal trace {LEVEL}.\nValues: Off, Error, Warning, Info, Verbose (Debug)",
@@ -145,7 +145,7 @@ namespace BenchmarkSuite.ConsoleRunner.Options
 			this.Add("nocolor|noc", "Displays console output without color.",
 				v => NoColor = v != null);
 
-			this.Add("verbose|v", "Display additional information as the test runs.",
+			this.Add("verbose|v", "Display additional information as the benchmark runs.",
 				v => Verbose = v != null);
 
 			this.Add("help|h", "Display this message and exit.", 
