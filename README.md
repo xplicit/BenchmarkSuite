@@ -1,11 +1,12 @@
-[![NuGet](https://img.shields.io/nuget/v/BenchmarkSuite.ConsoleRunner.svg)](http://www.nuget.org/packages/BenchmarkSuite.ConsoleRunner/)
-[![NuGet](https://img.shields.io/nuget/v/BenchmarkSuite.Framework.svg)](http://www.nuget.org/packages/BenchmarkSuite.Framework/)
-
-
 BenchmarkSuite
 ==============
 
 Benchmark framework for .NET and Mono
+
+###Downloads:
+- BenchmarkSuite.ConsoleRunner [![ConsoleRunner](https://img.shields.io/nuget/v/BenchmarkSuite.ConsoleRunner.svg)](http://www.nuget.org/packages/BenchmarkSuite.ConsoleRunner/)
+- BenchmarkSuite.Framework [![NuGet](https://img.shields.io/nuget/v/BenchmarkSuite.Framework.svg)](http://www.nuget.org/packages/BenchmarkSuite.Framework/)
+
 
 Introduction
 --------------
