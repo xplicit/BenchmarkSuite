@@ -1,3 +1,6 @@
+[![NuGet](https://img.shields.io/badge/nuget%3A%20bench--console-v1.0.2-blue.svg)](http://www.nuget.org/packages/BenchmarkSuite.ConsoleRunner/)
+[![NuGet](https://img.shields.io/badge/nuget%3A%20framework-v1.0.2-blue.svg)](http://www.nuget.org/packages/BenchmarkSuite.Framework/)
+
 BenchmarkSuite
 ==============
 
