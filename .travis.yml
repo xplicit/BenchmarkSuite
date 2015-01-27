@@ -1,9 +1,9 @@
 ﻿language: csharp
 solution: BenchmarkSuite.sln
 before_install:
-  - mono --version
 #  - sudo apt-get install nunit-console
 before_script:
+  - mono --version
 #  - nuget restore solution-name.sln
 after_script:
 #  - nunit-console Tests/bin/Release/Tests.dll
