@@ -23,7 +23,7 @@ Benchmark Suite allows to write benchmarks in NUnit-style, when one can mark the
 		{
 			int x = 0;
 
-			var b = b.StartNew ();
+			var b = Benchmark.StartNew ();
             for (int i = 0; i < nIter; i++) {
             	//benchmarking adding operation
 				x += 1;
